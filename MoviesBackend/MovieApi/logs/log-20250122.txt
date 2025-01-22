@@ -1,0 +1,470 @@
+2025-01-22 06:09:41.850 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-22 06:09:42.136 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-01-22 06:09:42.219 +05:30 [INF] Now listening on: https://localhost:7239
+2025-01-22 06:09:42.221 +05:30 [INF] Now listening on: http://localhost:5148
+2025-01-22 06:09:42.375 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-22 06:09:42.379 +05:30 [INF] Hosting environment: Development
+2025-01-22 06:09:42.381 +05:30 [INF] Content root path: D:\Angular\Movies\MoviesApi\MovieApi
+2025-01-22 06:09:44.183 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger - null null
+2025-01-22 06:09:44.610 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger - 301 0 null 442.4841ms
+2025-01-22 06:09:44.622 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/index.html - null null
+2025-01-22 06:09:44.764 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/index.html - 200 null text/html;charset=utf-8 141.3329ms
+2025-01-22 06:09:44.801 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/swagger-ui.css - null null
+2025-01-22 06:09:44.801 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/swagger-ui-bundle.js - null null
+2025-01-22 06:09:44.811 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/swagger-ui-standalone-preset.js - null null
+2025-01-22 06:09:44.811 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-22 06:09:44.832 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 34.2634ms
+2025-01-22 06:09:44.897 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/_vs/browserLink - null null
+2025-01-22 06:09:44.965 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-01-22 06:09:44.979 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/swagger-ui.css - 200 143943 text/css 181.3645ms
+2025-01-22 06:09:44.988 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-01-22 06:09:44.992 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 193.6664ms
+2025-01-22 06:09:45.025 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-01-22 06:09:45.029 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 231.1525ms
+2025-01-22 06:09:45.098 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/_vs/browserLink - 200 null text/javascript; charset=UTF-8 201.8293ms
+2025-01-22 06:09:46.407 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - null null
+2025-01-22 06:09:46.683 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 277.3731ms
+2025-01-22 06:10:35.989 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7239/api/User/Register - application/json 154
+2025-01-22 06:10:35.999 +05:30 [INF] Executing endpoint 'MovieApi.Controllers.UserController.RegisterUser (MovieApi)'
+2025-01-22 06:10:36.034 +05:30 [INF] Route matched with {action = "RegisterUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(App.Core.Models.UserDto) on controller MovieApi.Controllers.UserController (MovieApi).
+2025-01-22 06:10:38.387 +05:30 [INF] Executed DbCommand (111ms) [Parameters=[@__dto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[DateOfBirth], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[RoleId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__dto_Email_0
+2025-01-22 06:10:38.645 +05:30 [INF] Executed action MovieApi.Controllers.UserController.RegisterUser (MovieApi) in 2603.6022ms
+2025-01-22 06:10:38.651 +05:30 [INF] Executed endpoint 'MovieApi.Controllers.UserController.RegisterUser (MovieApi)'
+2025-01-22 06:10:38.654 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+UserDto -> User
+App.Core.Models.UserDto -> Domain.Entities.User
+   at lambda_method22(Closure, Object, User, ResolutionContext)
+   at App.Core.Apps.User.Command.CreateUserCommandHandler.Handle(CreateUserCommand command, CancellationToken cancellationToken) in D:\Angular\Movies\MoviesApi\App.Core\Apps\User\Command\CreateUserCommand.cs:line 50
+   at MovieApi.Controllers.UserController.RegisterUser(UserDto userDto) in D:\Angular\Movies\MoviesApi\MovieApi\Controllers\UserController.cs:line 22
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-22 06:10:38.693 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7239/api/User/Register - 500 null text/plain; charset=utf-8 2704.1611ms
+2025-01-22 06:11:24.949 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-22 06:11:25.241 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-01-22 06:11:25.316 +05:30 [INF] Now listening on: https://localhost:7239
+2025-01-22 06:11:25.317 +05:30 [INF] Now listening on: http://localhost:5148
+2025-01-22 06:11:25.419 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-22 06:11:25.420 +05:30 [INF] Hosting environment: Development
+2025-01-22 06:11:25.421 +05:30 [INF] Content root path: D:\Angular\Movies\MoviesApi\MovieApi
+2025-01-22 06:11:26.218 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger - null null
+2025-01-22 06:11:26.538 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger - 301 0 null 333.7675ms
+2025-01-22 06:11:26.545 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/index.html - null null
+2025-01-22 06:11:26.652 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/swagger-ui.css - null null
+2025-01-22 06:11:26.664 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/swagger-ui-standalone-preset.js - null null
+2025-01-22 06:11:26.664 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/swagger-ui-bundle.js - null null
+2025-01-22 06:11:26.668 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/index.html - 200 null text/html;charset=utf-8 123.1749ms
+2025-01-22 06:11:26.705 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/_vs/browserLink - null null
+2025-01-22 06:11:26.717 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-22 06:11:26.721 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-01-22 06:11:26.723 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/swagger-ui.css - 200 143943 text/css 71.5902ms
+2025-01-22 06:11:26.731 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-01-22 06:11:26.736 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 83.8377ms
+2025-01-22 06:11:26.747 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 30.1125ms
+2025-01-22 06:11:26.758 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-01-22 06:11:26.760 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 108.7192ms
+2025-01-22 06:11:26.791 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/_vs/browserLink - 200 null text/javascript; charset=UTF-8 86.7764ms
+2025-01-22 06:11:27.664 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - null null
+2025-01-22 06:11:27.860 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 196.6345ms
+2025-01-22 06:12:13.448 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7239/api/User/Register - application/json 154
+2025-01-22 06:12:13.458 +05:30 [INF] Executing endpoint 'MovieApi.Controllers.UserController.RegisterUser (MovieApi)'
+2025-01-22 06:12:13.506 +05:30 [INF] Route matched with {action = "RegisterUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(App.Core.Models.UserDto) on controller MovieApi.Controllers.UserController (MovieApi).
+2025-01-22 06:12:16.974 +05:30 [INF] Executed DbCommand (117ms) [Parameters=[@__dto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[DateOfBirth], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[RoleId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__dto_Email_0
+2025-01-22 06:12:17.333 +05:30 [INF] Executed DbCommand (66ms) [Parameters=[@p0='?' (DbType = Date), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([DateOfBirth], [Email], [FirstName], [LastName], [Password], [RoleId])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-01-22 06:12:17.406 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.Database.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Users_Role_RoleId". The conflict occurred in database "MoviesDb", table "dbo.Role", column 'RoleId'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:d273916f-ea87-40e3-bd1b-bc8cfebcad92
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Users_Role_RoleId". The conflict occurred in database "MoviesDb", table "dbo.Role", column 'RoleId'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:d273916f-ea87-40e3-bd1b-bc8cfebcad92
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-01-22 06:12:17.617 +05:30 [INF] Executed action MovieApi.Controllers.UserController.RegisterUser (MovieApi) in 4101.4222ms
+2025-01-22 06:12:17.622 +05:30 [INF] Executed endpoint 'MovieApi.Controllers.UserController.RegisterUser (MovieApi)'
+2025-01-22 06:12:17.628 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Users_Role_RoleId". The conflict occurred in database "MoviesDb", table "dbo.Role", column 'RoleId'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:d273916f-ea87-40e3-bd1b-bc8cfebcad92
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at App.Core.Apps.User.Command.CreateUserCommandHandler.Handle(CreateUserCommand command, CancellationToken cancellationToken) in D:\Angular\Movies\MoviesApi\App.Core\Apps\User\Command\CreateUserCommand.cs:line 52
+   at MovieApi.Controllers.UserController.RegisterUser(UserDto userDto) in D:\Angular\Movies\MoviesApi\MovieApi\Controllers\UserController.cs:line 22
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-22 06:12:17.689 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7239/api/User/Register - 500 null text/plain; charset=utf-8 4241.8227ms
+2025-01-22 06:15:28.170 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7239/api/User/Register - application/json 154
+2025-01-22 06:15:28.182 +05:30 [INF] Executing endpoint 'MovieApi.Controllers.UserController.RegisterUser (MovieApi)'
+2025-01-22 06:15:28.183 +05:30 [INF] Route matched with {action = "RegisterUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(App.Core.Models.UserDto) on controller MovieApi.Controllers.UserController (MovieApi).
+2025-01-22 06:15:28.380 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__dto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[DateOfBirth], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[RoleId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__dto_Email_0
+2025-01-22 06:15:28.395 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Date), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([DateOfBirth], [Email], [FirstName], [LastName], [Password], [RoleId])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-01-22 06:15:28.462 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-22 06:15:28.476 +05:30 [INF] Executed action MovieApi.Controllers.UserController.RegisterUser (MovieApi) in 290.9177ms
+2025-01-22 06:15:28.480 +05:30 [INF] Executed endpoint 'MovieApi.Controllers.UserController.RegisterUser (MovieApi)'
+2025-01-22 06:15:28.481 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7239/api/User/Register - 200 null application/json; charset=utf-8 311.4652ms
+2025-01-22 06:15:46.191 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7239/api/User/Register - application/json 154
+2025-01-22 06:15:46.203 +05:30 [INF] Executing endpoint 'MovieApi.Controllers.UserController.RegisterUser (MovieApi)'
+2025-01-22 06:15:46.207 +05:30 [INF] Route matched with {action = "RegisterUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterUser(App.Core.Models.UserDto) on controller MovieApi.Controllers.UserController (MovieApi).
+2025-01-22 06:15:46.255 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[@__dto_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[DateOfBirth], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[RoleId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__dto_Email_0
+2025-01-22 06:15:46.270 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-22 06:15:46.273 +05:30 [INF] Executed action MovieApi.Controllers.UserController.RegisterUser (MovieApi) in 64.7536ms
+2025-01-22 06:15:46.275 +05:30 [INF] Executed endpoint 'MovieApi.Controllers.UserController.RegisterUser (MovieApi)'
+2025-01-22 06:15:46.277 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7239/api/User/Register - 200 null application/json; charset=utf-8 86.48ms
+2025-01-22 06:19:04.489 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-22 06:19:06.123 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-01-22 06:19:06.440 +05:30 [INF] Now listening on: https://localhost:7239
+2025-01-22 06:19:06.442 +05:30 [INF] Now listening on: http://localhost:5148
+2025-01-22 06:19:06.619 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-22 06:19:06.621 +05:30 [INF] Hosting environment: Development
+2025-01-22 06:19:06.622 +05:30 [INF] Content root path: D:\Angular\Movies\MoviesApi\MovieApi
+2025-01-22 06:19:07.381 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger - null null
+2025-01-22 06:19:07.965 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger - 301 0 null 600.8491ms
+2025-01-22 06:19:07.976 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/index.html - null null
+2025-01-22 06:19:08.194 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/swagger-ui-bundle.js - null null
+2025-01-22 06:19:08.199 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/swagger-ui.css - null null
+2025-01-22 06:19:08.199 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/swagger-ui-standalone-preset.js - null null
+2025-01-22 06:19:08.199 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-22 06:19:08.211 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/index.html - 200 null text/html;charset=utf-8 235.2561ms
+2025-01-22 06:19:08.233 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 39.5932ms
+2025-01-22 06:19:08.286 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/_vs/browserLink - null null
+2025-01-22 06:19:08.332 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-01-22 06:19:08.335 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-01-22 06:19:08.341 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/swagger-ui.css - 200 143943 text/css 140.6037ms
+2025-01-22 06:19:08.345 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 146.8205ms
+2025-01-22 06:19:08.394 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-01-22 06:19:08.397 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 203.4399ms
+2025-01-22 06:19:08.461 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/_vs/browserLink - 200 null text/javascript; charset=UTF-8 176.2041ms
+2025-01-22 06:19:10.150 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - null null
+2025-01-22 06:19:10.631 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 481.7065ms
+2025-01-22 06:39:03.995 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-22 06:39:04.423 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-01-22 06:39:04.694 +05:30 [INF] Now listening on: https://localhost:7239
+2025-01-22 06:39:04.696 +05:30 [INF] Now listening on: http://localhost:5148
+2025-01-22 06:39:05.023 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-22 06:39:05.025 +05:30 [INF] Hosting environment: Development
+2025-01-22 06:39:05.026 +05:30 [INF] Content root path: D:\Angular\Movies\MoviesApi\MovieApi
+2025-01-22 06:39:05.766 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger - null null
+2025-01-22 06:39:06.246 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger - 301 0 null 498.6386ms
+2025-01-22 06:39:06.263 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/index.html - null null
+2025-01-22 06:39:06.383 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/index.html - 200 null text/html;charset=utf-8 118.8139ms
+2025-01-22 06:39:06.407 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/swagger-ui.css - null null
+2025-01-22 06:39:06.409 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-22 06:39:06.409 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/swagger-ui-standalone-preset.js - null null
+2025-01-22 06:39:06.417 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/swagger-ui-bundle.js - null null
+2025-01-22 06:39:06.433 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 25.4814ms
+2025-01-22 06:39:06.485 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/_vs/browserLink - null null
+2025-01-22 06:39:06.504 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-01-22 06:39:06.504 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-01-22 06:39:06.514 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 102.4803ms
+2025-01-22 06:39:06.518 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/swagger-ui.css - 200 143943 text/css 108.8109ms
+2025-01-22 06:39:06.523 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-01-22 06:39:06.527 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 121.018ms
+2025-01-22 06:39:06.569 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/_vs/browserLink - 200 null text/javascript; charset=UTF-8 83.6483ms
+2025-01-22 06:39:07.853 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - null null
+2025-01-22 06:39:08.237 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 386.8273ms
+2025-01-22 06:39:36.088 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7239/api/User/Login - null 0
+2025-01-22 06:39:36.099 +05:30 [INF] Executing endpoint 'MovieApi.Controllers.UserController.Login (MovieApi)'
+2025-01-22 06:39:36.150 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String, System.String) on controller MovieApi.Controllers.UserController (MovieApi).
+2025-01-22 06:39:36.198 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-01-22 06:39:36.235 +05:30 [INF] Executed action MovieApi.Controllers.UserController.Login (MovieApi) in 76.4181ms
+2025-01-22 06:39:36.237 +05:30 [INF] Executed endpoint 'MovieApi.Controllers.UserController.Login (MovieApi)'
+2025-01-22 06:39:36.238 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7239/api/User/Login - 400 null application/problem+json; charset=utf-8 150.4279ms
+2025-01-22 06:39:46.951 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7239/api/User/Login?Email=saa&Password=asa - null 0
+2025-01-22 06:39:46.956 +05:30 [INF] Executing endpoint 'MovieApi.Controllers.UserController.Login (MovieApi)'
+2025-01-22 06:39:46.956 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String, System.String) on controller MovieApi.Controllers.UserController (MovieApi).
+2025-01-22 06:39:49.809 +05:30 [INF] Executed DbCommand (150ms) [Parameters=[@__command_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[DateOfBirth], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[RoleId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__command_Email_0
+2025-01-22 06:39:49.829 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-22 06:39:49.836 +05:30 [INF] Executed action MovieApi.Controllers.UserController.Login (MovieApi) in 2878.0348ms
+2025-01-22 06:39:49.837 +05:30 [INF] Executed endpoint 'MovieApi.Controllers.UserController.Login (MovieApi)'
+2025-01-22 06:39:49.845 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7239/api/User/Login?Email=saa&Password=asa - 200 null application/json; charset=utf-8 2895.214ms
+2025-01-22 06:40:03.164 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7239/api/User/Login?Email=rautshreya224%40gmail.com&Password=asa - null 0
+2025-01-22 06:40:03.170 +05:30 [INF] Executing endpoint 'MovieApi.Controllers.UserController.Login (MovieApi)'
+2025-01-22 06:40:03.171 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String, System.String) on controller MovieApi.Controllers.UserController (MovieApi).
+2025-01-22 06:40:03.287 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@__command_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[DateOfBirth], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[RoleId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__command_Email_0
+2025-01-22 06:40:03.498 +05:30 [INF] Executed DbCommand (96ms) [Parameters=[@__command_Password_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[DateOfBirth], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[RoleId]
+FROM [Users] AS [u]
+WHERE [u].[Password] = @__command_Password_0
+2025-01-22 06:40:03.502 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-22 06:40:03.503 +05:30 [INF] Executed action MovieApi.Controllers.UserController.Login (MovieApi) in 328.2066ms
+2025-01-22 06:40:03.504 +05:30 [INF] Executed endpoint 'MovieApi.Controllers.UserController.Login (MovieApi)'
+2025-01-22 06:40:03.505 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7239/api/User/Login?Email=rautshreya224%40gmail.com&Password=asa - 200 null application/json; charset=utf-8 340.8413ms
+2025-01-22 06:40:13.114 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7239/api/User/Login?Email=rautshreya224%40gmail.com&Password=123 - null 0
+2025-01-22 06:40:13.120 +05:30 [INF] Executing endpoint 'MovieApi.Controllers.UserController.Login (MovieApi)'
+2025-01-22 06:40:13.120 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String, System.String) on controller MovieApi.Controllers.UserController (MovieApi).
+2025-01-22 06:40:13.137 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__command_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[DateOfBirth], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[RoleId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__command_Email_0
+2025-01-22 06:40:13.141 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__command_Password_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[DateOfBirth], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[RoleId]
+FROM [Users] AS [u]
+WHERE [u].[Password] = @__command_Password_0
+2025-01-22 06:40:13.243 +05:30 [INF] Executed DbCommand (41ms) [Parameters=[@__ValidEmail_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[RoleType]
+FROM [Role] AS [r]
+WHERE [r].[RoleId] = @__ValidEmail_RoleId_0
+2025-01-22 06:40:13.383 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`3[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-22 06:40:13.388 +05:30 [INF] Executed action MovieApi.Controllers.UserController.Login (MovieApi) in 266.1994ms
+2025-01-22 06:40:13.389 +05:30 [INF] Executed endpoint 'MovieApi.Controllers.UserController.Login (MovieApi)'
+2025-01-22 06:40:13.391 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7239/api/User/Login?Email=rautshreya224%40gmail.com&Password=123 - 200 null application/json; charset=utf-8 278.1287ms
+2025-01-22 06:53:25.616 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-22 06:53:26.002 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-01-22 06:53:26.129 +05:30 [INF] Now listening on: https://localhost:7239
+2025-01-22 06:53:26.133 +05:30 [INF] Now listening on: http://localhost:5148
+2025-01-22 06:53:26.264 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-22 06:53:26.266 +05:30 [INF] Hosting environment: Development
+2025-01-22 06:53:26.268 +05:30 [INF] Content root path: D:\Angular\Movies\MoviesApi\MovieApi
+2025-01-22 06:53:26.919 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger - null null
+2025-01-22 06:53:27.325 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger - 301 0 null 430.1859ms
+2025-01-22 06:53:27.338 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/index.html - null null
+2025-01-22 06:53:27.476 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/index.html - 200 null text/html;charset=utf-8 138.1308ms
+2025-01-22 06:53:27.482 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/swagger-ui.css - null null
+2025-01-22 06:53:27.482 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/swagger-ui-standalone-preset.js - null null
+2025-01-22 06:53:27.487 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-22 06:53:27.487 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/swagger-ui-bundle.js - null null
+2025-01-22 06:53:27.504 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 22.4891ms
+2025-01-22 06:53:27.524 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/_vs/browserLink - null null
+2025-01-22 06:53:27.562 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-01-22 06:53:27.563 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-01-22 06:53:27.566 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/swagger-ui.css - 200 143943 text/css 84.1897ms
+2025-01-22 06:53:27.566 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 84.1279ms
+2025-01-22 06:53:27.601 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-01-22 06:53:27.602 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 120.13ms
+2025-01-22 06:53:27.621 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/_vs/browserLink - 200 null text/javascript; charset=UTF-8 97.8261ms
+2025-01-22 06:53:28.542 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - null null
+2025-01-22 06:53:28.835 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 293.2047ms
+2025-01-22 06:53:46.939 +05:30 [INF] Request starting HTTP/2 DELETE https://localhost:7239/api/Movie/Delete-Movie?MovieId=1 - null null
+2025-01-22 06:53:46.955 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The AuthorizationPolicy named: 'Admin' was not found.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData, IEnumerable`1 policies)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-22 06:53:46.998 +05:30 [INF] Request finished HTTP/2 DELETE https://localhost:7239/api/Movie/Delete-Movie?MovieId=1 - 500 null text/plain; charset=utf-8 58.9341ms
+2025-01-22 06:57:13.814 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7239/api/User/Login?Email=rautshreya224%40gmail.com&Password=123 - null 0
+2025-01-22 06:57:13.835 +05:30 [INF] Executing endpoint 'MovieApi.Controllers.UserController.Login (MovieApi)'
+2025-01-22 06:57:13.913 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String, System.String) on controller MovieApi.Controllers.UserController (MovieApi).
+2025-01-22 06:57:17.054 +05:30 [INF] Executed DbCommand (73ms) [Parameters=[@__command_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[DateOfBirth], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[RoleId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__command_Email_0
+2025-01-22 06:57:17.205 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__command_Password_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[DateOfBirth], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[RoleId]
+FROM [Users] AS [u]
+WHERE [u].[Password] = @__command_Password_0
+2025-01-22 06:57:17.282 +05:30 [INF] Executed DbCommand (39ms) [Parameters=[@__ValidEmail_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[RoleType]
+FROM [Role] AS [r]
+WHERE [r].[RoleId] = @__ValidEmail_RoleId_0
+2025-01-22 06:57:17.418 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`3[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-22 06:57:17.433 +05:30 [INF] Executed action MovieApi.Controllers.UserController.Login (MovieApi) in 3512.2776ms
+2025-01-22 06:57:17.436 +05:30 [INF] Executed endpoint 'MovieApi.Controllers.UserController.Login (MovieApi)'
+2025-01-22 06:57:17.448 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7239/api/User/Login?Email=rautshreya224%40gmail.com&Password=123 - 200 null application/json; charset=utf-8 3635.3165ms
+2025-01-22 06:57:34.228 +05:30 [INF] Request starting HTTP/2 DELETE https://localhost:7239/api/Movie/Delete-Movie?MovieId=1 - null null
+2025-01-22 06:57:34.308 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The AuthorizationPolicy named: 'Admin' was not found.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData, IEnumerable`1 policies)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-22 06:57:34.316 +05:30 [INF] Request finished HTTP/2 DELETE https://localhost:7239/api/Movie/Delete-Movie?MovieId=1 - 500 null text/plain; charset=utf-8 88.4859ms
+2025-01-22 07:00:26.390 +05:30 [INF] User profile is available. Using 'C:\Users\HP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-22 07:00:26.613 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-01-22 07:00:26.680 +05:30 [INF] Now listening on: https://localhost:7239
+2025-01-22 07:00:26.683 +05:30 [INF] Now listening on: http://localhost:5148
+2025-01-22 07:00:26.754 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-22 07:00:26.758 +05:30 [INF] Hosting environment: Development
+2025-01-22 07:00:26.759 +05:30 [INF] Content root path: D:\Angular\Movies\MoviesApi\MovieApi
+2025-01-22 07:00:27.472 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger - null null
+2025-01-22 07:00:27.657 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger - 301 0 null 199.558ms
+2025-01-22 07:00:27.664 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/index.html - null null
+2025-01-22 07:00:27.761 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/index.html - 200 null text/html;charset=utf-8 96.4755ms
+2025-01-22 07:00:28.242 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-22 07:00:28.242 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/swagger-ui-bundle.js - null null
+2025-01-22 07:00:28.242 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/swagger-ui.css - null null
+2025-01-22 07:00:28.247 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/swagger-ui-standalone-preset.js - null null
+2025-01-22 07:00:28.254 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/_framework/aspnetcore-browser-refresh.js - 200 13752 application/javascript; charset=utf-8 12.2873ms
+2025-01-22 07:00:28.296 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-01-22 07:00:28.297 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-01-22 07:00:28.301 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 59.1982ms
+2025-01-22 07:00:28.301 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/swagger-ui.css - 200 143943 text/css 59.5515ms
+2025-01-22 07:00:28.307 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/_vs/browserLink - null null
+2025-01-22 07:00:28.321 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-01-22 07:00:28.323 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 81.0962ms
+2025-01-22 07:00:28.375 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/_vs/browserLink - 200 null text/javascript; charset=UTF-8 68.5269ms
+2025-01-22 07:00:29.161 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - null null
+2025-01-22 07:00:29.354 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7239/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 193.1549ms
+2025-01-22 07:00:38.129 +05:30 [INF] Request starting HTTP/2 DELETE https://localhost:7239/api/Movie/Delete-Movie?MovieId=1 - null null
+2025-01-22 07:00:38.230 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2025-01-22 07:00:38.239 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-01-22 07:00:38.241 +05:30 [INF] Request finished HTTP/2 DELETE https://localhost:7239/api/Movie/Delete-Movie?MovieId=1 - 401 0 null 112.1666ms
+2025-01-22 07:01:06.607 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7239/api/User/Login?Email=rautshreya224%40gmail.com&Password=123 - null 0
+2025-01-22 07:01:06.615 +05:30 [INF] Executing endpoint 'MovieApi.Controllers.UserController.Login (MovieApi)'
+2025-01-22 07:01:06.662 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String, System.String) on controller MovieApi.Controllers.UserController (MovieApi).
+2025-01-22 07:01:08.997 +05:30 [INF] Executed DbCommand (71ms) [Parameters=[@__command_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[DateOfBirth], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[RoleId]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__command_Email_0
+2025-01-22 07:01:09.125 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__command_Password_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[DateOfBirth], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[RoleId]
+FROM [Users] AS [u]
+WHERE [u].[Password] = @__command_Password_0
+2025-01-22 07:01:09.193 +05:30 [INF] Executed DbCommand (34ms) [Parameters=[@__ValidEmail_RoleId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RoleId], [r].[RoleType]
+FROM [Role] AS [r]
+WHERE [r].[RoleId] = @__ValidEmail_RoleId_0
+2025-01-22 07:01:09.274 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`3[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-22 07:01:09.300 +05:30 [INF] Executed action MovieApi.Controllers.UserController.Login (MovieApi) in 2628.8077ms
+2025-01-22 07:01:09.302 +05:30 [INF] Executed endpoint 'MovieApi.Controllers.UserController.Login (MovieApi)'
+2025-01-22 07:01:09.314 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7239/api/User/Login?Email=rautshreya224%40gmail.com&Password=123 - 200 null application/json; charset=utf-8 2706.9304ms
+2025-01-22 07:01:24.459 +05:30 [INF] Request starting HTTP/2 DELETE https://localhost:7239/api/Movie/Delete-Movie?MovieId=1 - null null
+2025-01-22 07:01:24.666 +05:30 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.DeleteMovie (MovieApi)'
+2025-01-22 07:01:24.677 +05:30 [INF] Route matched with {action = "DeleteMovie", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteMovie(Int32) on controller MovieApi.Controllers.MovieController (MovieApi).
+2025-01-22 07:01:24.844 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@__command_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[MovieId], [m].[IsDeleted], [m].[PosterImg], [m].[ReleaseYear], [m].[Title]
+FROM [Movies] AS [m]
+WHERE [m].[MovieId] = @__command_Id_0 AND [m].[IsDeleted] = CAST(0 AS bit)
+2025-01-22 07:01:24.996 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Movies] SET [IsDeleted] = @p0, [PosterImg] = @p1, [ReleaseYear] = @p2, [Title] = @p3
+OUTPUT 1
+WHERE [MovieId] = @p4;
+2025-01-22 07:01:25.014 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-22 07:01:25.018 +05:30 [INF] Executed action MovieApi.Controllers.MovieController.DeleteMovie (MovieApi) in 336.9879ms
+2025-01-22 07:01:25.021 +05:30 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.DeleteMovie (MovieApi)'
+2025-01-22 07:01:25.022 +05:30 [INF] Request finished HTTP/2 DELETE https://localhost:7239/api/Movie/Delete-Movie?MovieId=1 - 200 null application/json; charset=utf-8 563.3595ms

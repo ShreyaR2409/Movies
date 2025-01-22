@@ -1,0 +1,69 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Angular\\Movies\\MoviesApi\\MovieApi\\wwwroot\\uploads\\04726713-974c-4035-9463-a17f832fce26_NoImage.png",
+      "PackagePath": "staticwebassets\\uploads\\04726713-974c-4035-9463-a17f832fce26_NoImage.png"
+    },
+    {
+      "Id": "D:\\Angular\\Movies\\MoviesApi\\MovieApi\\wwwroot\\uploads\\121f5401-ad2b-4b0b-90de-94f4630fbb0d_user.png",
+      "PackagePath": "staticwebassets\\uploads\\121f5401-ad2b-4b0b-90de-94f4630fbb0d_user.png"
+    },
+    {
+      "Id": "D:\\Angular\\Movies\\MoviesApi\\MovieApi\\wwwroot\\uploads\\2566f6d9-1ffe-45a5-8572-e96b8164ed3d_DefaultPoster.png",
+      "PackagePath": "staticwebassets\\uploads\\2566f6d9-1ffe-45a5-8572-e96b8164ed3d_DefaultPoster.png"
+    },
+    {
+      "Id": "D:\\Angular\\Movies\\MoviesApi\\MovieApi\\wwwroot\\uploads\\345356bb-53a0-463e-b746-904f71c0fb2f_Lays.jpg",
+      "PackagePath": "staticwebassets\\uploads\\345356bb-53a0-463e-b746-904f71c0fb2f_Lays.jpg"
+    },
+    {
+      "Id": "D:\\Angular\\Movies\\MoviesApi\\MovieApi\\wwwroot\\uploads\\49076eb8-d2dc-4f43-8652-160aa07ad5d3_NoImage.png",
+      "PackagePath": "staticwebassets\\uploads\\49076eb8-d2dc-4f43-8652-160aa07ad5d3_NoImage.png"
+    },
+    {
+      "Id": "D:\\Angular\\Movies\\MoviesApi\\MovieApi\\wwwroot\\uploads\\58f9e399-51ba-4e0b-9516-bdee4edf9ba6_user.png",
+      "PackagePath": "staticwebassets\\uploads\\58f9e399-51ba-4e0b-9516-bdee4edf9ba6_user.png"
+    },
+    {
+      "Id": "D:\\Angular\\Movies\\MoviesApi\\MovieApi\\wwwroot\\uploads\\86d23619-c965-4c03-bea8-9d4a74c68984_kurkure.jpg",
+      "PackagePath": "staticwebassets\\uploads\\86d23619-c965-4c03-bea8-9d4a74c68984_kurkure.jpg"
+    },
+    {
+      "Id": "D:\\Angular\\Movies\\MoviesApi\\MovieApi\\wwwroot\\uploads\\8709a90d-7b3b-40a8-8de1-d29947c29f6c_NoImage.png",
+      "PackagePath": "staticwebassets\\uploads\\8709a90d-7b3b-40a8-8de1-d29947c29f6c_NoImage.png"
+    },
+    {
+      "Id": "D:\\Angular\\Movies\\MoviesApi\\MovieApi\\wwwroot\\uploads\\b6f61caf-aea3-4513-8e99-0b39f471e942_NoImage.png",
+      "PackagePath": "staticwebassets\\uploads\\b6f61caf-aea3-4513-8e99-0b39f471e942_NoImage.png"
+    },
+    {
+      "Id": "D:\\Angular\\Movies\\MoviesApi\\MovieApi\\wwwroot\\uploads\\d9a09e4e-6a98-400b-a418-d7ffe726e498_img2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\d9a09e4e-6a98-400b-a418-d7ffe726e498_img2.jpg"
+    },
+    {
+      "Id": "D:\\Angular\\Movies\\MoviesApi\\MovieApi\\wwwroot\\uploads\\f792b638-2731-4cc8-a2a1-7156675b99b4_NoImage.png",
+      "PackagePath": "staticwebassets\\uploads\\f792b638-2731-4cc8-a2a1-7156675b99b4_NoImage.png"
+    },
+    {
+      "Id": "D:\\Angular\\Movies\\MoviesApi\\MovieApi\\wwwroot\\uploads\\ffe294d3-be5b-43b8-bbc0-6e885270abb1_Lays.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ffe294d3-be5b-43b8-bbc0-6e885270abb1_Lays.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MovieApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.MovieApi.props",
+      "PackagePath": "build\\MovieApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MovieApi.props",
+      "PackagePath": "buildMultiTargeting\\MovieApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.MovieApi.props",
+      "PackagePath": "buildTransitive\\MovieApi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

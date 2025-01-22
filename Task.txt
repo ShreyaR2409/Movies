@@ -1,0 +1,21 @@
+Task 1
+Question: Implement a DOTNET Core 8.0 web service that returns a list of movies, Implement full CRUD for Movies. Response should include movie title, release year and poster image. 
+
+API details: 
+GET 
+URL: https://<your web api FQDN>?s=[movie title]&apikey=[apikey] 
+
+Task 2
+Question: Implement an Angular app that searches a list of movies from the API endpoint in task 1 and displays the results in a list. Each cell should show the movie title, release year, and poster image.
+
+Task 3 
+Question: Implement JWT Authentication and Authorization to secure Apis. Only User with Admin role will be able to delete any record. 
+
+
+Things we are looking for in the task: 
+Clean Architecture and design pattern, with Automapper, Fluent Validation and MediatR library for CQRS. 
+Ensure proper logging (serilog) and exception handling. 
+Good UX thought and implementation.
+
+
+Timeline – 23rd Jan 2025, by 5 o’clock. 
