@@ -5,25 +5,25 @@
 namespace Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class ColumnAdded : Migration
+    public partial class Apikey : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<bool>(
-                name: "IsDeleted",
-                table: "Movies",
-                type: "bit",
+            migrationBuilder.AddColumn<string>(
+                name: "ApiKey",
+                table: "Users",
+                type: "nvarchar(max)",
                 nullable: false,
-                defaultValue: false);
+                defaultValue: "");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "IsDeleted",
-                table: "Movies");
+                name: "ApiKey",
+                table: "Users");
         }
     }
 }

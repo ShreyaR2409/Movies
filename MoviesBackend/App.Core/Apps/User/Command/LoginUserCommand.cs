@@ -1,4 +1,5 @@
 ﻿using App.Core.Interfaces;
+using App.Core.Models;
 using Domain.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -12,8 +13,7 @@ namespace App.Core.Apps.User.Command
 {
     public class LoginUserCommand : IRequest<object>
     {
-        public string Email { get; set; }
-        public string Password { get; set; }
+        public LoginDto loginDto { get; set; }
     }
 
     public class LoginUserCommandHandler : IRequestHandler<LoginUserCommand,object>
@@ -28,23 +28,14 @@ namespace App.Core.Apps.User.Command
 
         public async Task<object> Handle(LoginUserCommand command, CancellationToken cancellationToken)
         {
-            var ValidEmail = _appDbContext.Set<Domain.Entities.User>().FirstOrDefault(x => x.Email == command.Email);
-            if (ValidEmail == null)
+            var dto = command.loginDto;
+            var ValidEmail = _appDbContext.Set<Domain.Entities.User>().FirstOrDefault(x => x.Email == dto.Email);
+            if (ValidEmail == null || !VerifyPassword(dto.Password , ValidEmail.Password))
             {
                 return new
                 {
                     status = 404,
-                    message = "Invalid Email"
-                };
-            }
-
-            var ValidPassword = _appDbContext.Set<Domain.Entities.User>().FirstOrDefault(x => x.Password == command.Password);
-            if (ValidPassword == null)
-            {
-                return new
-                {
-                    status = 404,
-                    message = "Invalid Password"
+                    message = "Invalid Email or Password"
                 };
             }
 
@@ -62,8 +53,13 @@ namespace App.Core.Apps.User.Command
             {
                 status = 200,
                 message = "User Login Successfully",
-                Token = _jwtService.GenarateToken(ValidEmail, role.RoleType)
+                Token = _jwtService.GenarateToken(ValidEmail, role.RoleType, ValidEmail.ApiKey)
             };
         }
+        public bool VerifyPassword(string plainTextPassword, string hashedPassword)
+        {
+            return BCrypt.Net.BCrypt.Verify(plainTextPassword, hashedPassword);
+        }
+
     }
 }

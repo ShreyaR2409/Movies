@@ -53,6 +53,27 @@
   },
   {
     "ContainingType": "MovieApi.Controllers.MovieController",
+    "Method": "getAllMovies",
+    "RelativePath": "api/Movie/getSearchedMovie",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "s",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "apikey",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieApi.Controllers.MovieController",
     "Method": "UpdateMovie",
     "RelativePath": "api/Movie/Update-Movie",
     "HttpMethod": "PUT",
@@ -91,14 +112,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Email",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Password",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "loginDto",
+        "Type": "App.Core.Models.LoginDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

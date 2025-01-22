@@ -48,6 +48,12 @@ namespace App.Core.Apps.User.Command
             }
 
             var NewUser = _mapper.Map<Domain.Entities.User>(dto);
+            NewUser.Password = HashPassword(dto.Password);
+
+            Guid key = Guid.NewGuid();
+            var ApiKey = key.ToString();
+            NewUser.ApiKey = ApiKey;
+
             await _appDbContext.Set<Domain.Entities.User>().AddAsync(NewUser);
             await _appDbContext.SaveChangesAsync();
             return new
@@ -56,5 +62,11 @@ namespace App.Core.Apps.User.Command
                 message = "User Registered Successfully"
             };
         }
+
+        public string HashPassword(string password)
+        {
+            return BCrypt.Net.BCrypt.HashPassword(password);
+        }
+
     }
 }

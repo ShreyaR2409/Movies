@@ -10,13 +10,14 @@ namespace Domain.Entities
     public class User
     {
         public int UserId { get; set; }
-        public required string FirstName { get; set; }
-        public required string LastName { get; set; }
+        public  string FirstName { get; set; }
+        public  string LastName { get; set; }
         public DateOnly DateOfBirth { get; set; }
-        public required string Email { get; set; }
-        public required string Password { get; set; }
+        public  string Email { get; set; }
+        public  string Password { get; set; }
         [ForeignKey("Role")]
         public int RoleId { get; set; }
         public Role? Role { get; set; }
+        public string ApiKey { get; set; }
     }
 }

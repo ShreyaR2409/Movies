@@ -19,7 +19,8 @@ namespace Infrastructure.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ReleaseYear = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PosterImg = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    PosterImg = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {

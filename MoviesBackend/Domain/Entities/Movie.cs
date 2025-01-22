@@ -10,9 +10,9 @@ namespace Domain.Entities
     public class Movie
     {
         public int MovieId { get; set; }
-        public required string Title { get; set; }
-        public required string ReleaseYear { get; set; }
-        public required string PosterImg { get; set; }
+        public string Title { get; set; }
+        public string ReleaseYear { get; set; }
+        public string PosterImg { get; set; }
         public bool IsDeleted { get; set; } = false;
     }
 }

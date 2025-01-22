@@ -9,6 +9,6 @@ namespace Domain.Entities
     public class Role
     {
         public int RoleId { get; set; }
-        public required string RoleType { get; set; }
+        public  string RoleType { get; set; }
     }
 }

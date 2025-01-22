@@ -25,9 +25,9 @@ namespace MovieApi.Controllers
         }
 
         [HttpPost("Login")]
-        public async Task<IActionResult> Login(string Email, string Password)
+        public async Task<IActionResult> Login(LoginDto loginDto)
         {
-            var result = await _mediator.Send(new LoginUserCommand { Email = Email, Password = Password });
+            var result = await _mediator.Send(new LoginUserCommand { loginDto = loginDto });
             return Ok(result);
         }
     }

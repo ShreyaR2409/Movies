@@ -20,13 +20,15 @@ namespace Infrastructure.Services
             _configuration = configuration;
         }
 
-        public object GenarateToken(User user, string role)
+        public object GenarateToken(User user, string role, string ApiKey)
         {
             var claims = new[]
             {
-            new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
-            new Claim(ClaimTypes.Email, user.Email),
-            new Claim(ClaimTypes.Role, role)
+            new Claim("Id", user.UserId.ToString()),
+            new Claim(ClaimTypes.Role, role),
+            new Claim("Email", user.Email),
+            new Claim("Role", role),
+            new Claim("Api", ApiKey)
         };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));

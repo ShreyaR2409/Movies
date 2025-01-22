@@ -1,4 +1,4 @@
-.outer-div {
+/* .outer-div {
     background-color: #1c1c1c;
     color: #f8f9fa;
   }
@@ -13,7 +13,7 @@
 
   .login-image {
     flex: 1;
-    background: url('https://via.placeholder.com/600x800?text=Movie+Poster') center/cover no-repeat;
+    background: url('../../../Images/Poster1.jpg') center/cover no-repeat;
     min-height: 400px;
     max-width: 50%;
   }
@@ -57,4 +57,4 @@
 
   .register-link:hover {
     text-decoration: underline;
-  }
+  } */

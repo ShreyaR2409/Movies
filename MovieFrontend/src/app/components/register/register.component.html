@@ -3,27 +3,42 @@
       <div class="register-image"></div>
       <div class="register-form">
         <h2 class="text-center">Create an Account</h2>
-        <p class="text-center">Join us to explore the latest movies and trailers</p>
-        <form>
+        <p class="text-center">Join us to explore the latest movies</p>
+        <form [formGroup]="RegistrationForm">
           <div class="mb-3">
             <label for="firstname" class="form-label">First Name</label>
-            <input type="text" class="form-control" id="firstname" placeholder="Enter your first name" required>
+            <input type="text" formControlName="firstName" class="form-control" id="firstname" placeholder="Enter your first name" required>
+            <span class="text-danger" *ngIf="RegistrationForm.get('firstName')?.invalid && RegistrationForm.get('firstName')?.touched">
+              FirstName is required
+            </span>
           </div>
           <div class="mb-3">
             <label for="lastname" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="lastname" placeholder="Enter your last name" required>
+            <input type="text" formControlName="lastName" class="form-control" id="lastname" placeholder="Enter your last name" required>
+            <span class="text-danger" *ngIf="RegistrationForm.get('lastName')?.invalid && RegistrationForm.get('lastName')?.touched">
+              LastName is required
+            </span>
           </div>
           <div class="mb-3">
             <label for="dob" class="form-label">Date of Birth</label>
-            <input type="date" class="form-control" id="dob" required>
+            <input type="date" formControlName="dateOfBirth" class="form-control" id="dob" [max]="todayDate" required>
+            <span class="text-danger" *ngIf="RegistrationForm.get('dateOfBirth')?.invalid && RegistrationForm.get('dateOfBirth')?.touched">
+              Date of Birth is required
+            </span>
           </div>
           <div class="mb-3">
             <label for="email" class="form-label">Email Address</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            <input type="email" formControlName="email" class="form-control" id="email" placeholder="Enter your email" required>
+            <span class="text-danger" *ngIf="RegistrationForm.get('email')?.invalid && RegistrationForm.get('email')?.touched">
+              Email is required
+            </span>
           </div>
           <div class="mb-3">
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Create a password" required>
+            <input type="password" formControlName="password" class="form-control" id="password" placeholder="Create a password" required>
+            <span class="text-danger" *ngIf="RegistrationForm.get('password')?.invalid && RegistrationForm.get('password')?.touched">
+              Password is required
+            </span>
           </div>
           <div class="mb-3">
             <label for="retype-password" class="form-label">Retype Password</label>
@@ -31,16 +46,18 @@
           </div>
           <div class="mb-3">
             <label for="role" class="form-label">Role</label>
-            <select class="form-select" id="role" required>
+            <select class="form-select" formControlName="roleId" id="role" required>
               <option value="" disabled selected>Select your role</option>
-              <option value="viewer">Viewer</option>
-              <option value="critic">Critic</option>
-              <option value="admin">Admin</option>
+              <option value="1">Admin</option>
+              <option value="2">User</option>
             </select>
+            <span class="text-danger" *ngIf="RegistrationForm.get('roleId')?.invalid && RegistrationForm.get('roleId')?.touched">
+              Role is required
+            </span>
           </div>
-          <button type="submit" class="btn btn-primary w-100">Register</button>
+          <button type="submit" class="btn btn-primary w-100" (click)="registerUser()">Register</button>
           <div class="mt-3 text-center">
-            <span>Already have an account? <a routerLink="login" class="login-link">Log in here</a></span>
+            <span>Already have an account? <a [routerLink]="['/login']" class="login-link">Log in here</a></span>
           </div>
         </form>
       </div>

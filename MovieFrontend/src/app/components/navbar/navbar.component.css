@@ -1,0 +1,35 @@
+.outer-div {
+    background-color: #1c1c1c;
+    color: #f8f9fa;
+  }
+
+  .navbar {
+    background-color: #343a40;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f39c12 !important;
+  }
+
+  .form-control {
+    background-color: #2c2c2c;
+    border: none;
+    color: #f8f9fa;
+  }
+
+  .form-control:focus {
+    box-shadow: 0 0 0 2px #f39c12;
+    background-color: #2c2c2c;
+  }
+
+  .btn-search {
+    background-color: #f39c12;
+    color: #ffffff;
+    border: none;
+  }
+
+  .btn-search:hover {
+    background-color: #d35400;
+  }

@@ -1,6 +1,10 @@
 using App.Core;
+using App.Core.Validators;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Infrastructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -14,11 +18,17 @@ var jwtKey = builder.Configuration["Jwt:Key"];
 var jwtIssuer = builder.Configuration["Jwt:Issuer"];
 var key = Encoding.ASCII.GetBytes(jwtKey);
 // Add services to the container.
-builder.Services.AddApplication();
+
 // for Db 
+builder.Services.AddApplication();
 builder.Services.AddInfrastructure(configuration);
 builder.Services.AddAutoMapper(typeof(MapperConfig));
+
+builder.Services.AddFluentValidationAutoValidation().
+AddValidatorsFromAssemblyContaining(typeof(MovieDtoValidator));
+
 // Add services to the container.
+
 Log.Logger = new LoggerConfiguration()
               .ReadFrom.Configuration(configuration)
               .CreateBootstrapLogger();
@@ -32,7 +42,7 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "EHR API", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Movie API", Version = "v1" });
 
     // Configure Swagger to use Bearer token authentication
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -108,7 +118,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors(MyAllowSpecificOrigin);
+app.UseStaticFiles();
 app.UseHttpsRedirection();
 app.UseAuthentication(); 
 app.UseAuthorization();

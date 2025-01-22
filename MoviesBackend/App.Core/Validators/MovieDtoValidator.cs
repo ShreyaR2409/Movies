@@ -21,10 +21,10 @@ namespace App.Core.Validators
                 .NotEmpty().WithMessage("Release Year is required.")
                 .Matches(@"^\d{4}$").WithMessage("Release Year must be a valid 4-digit year.");
 
-            RuleFor(x => x.PosterImg)
-                .NotNull().WithMessage("Poster image is required.")
-                .Must(file => file.Length > 0).WithMessage("Poster image cannot be empty.")
-                .Must(file => IsImageFile(file)).WithMessage("Poster image must be a valid image file (e.g., .jpg, .png).");
+            //RuleFor(x => x.PosterImg)
+                //.NotNull().WithMessage("Poster image is required.")
+                //.Must(file => file.Length > 0).WithMessage("Poster image cannot be empty.")
+                //.Must(file => IsImageFile(file)).WithMessage("Poster image must be a valid image file (e.g., .jpg, .png).");
         }
 
         private bool IsImageFile(IFormFile file)

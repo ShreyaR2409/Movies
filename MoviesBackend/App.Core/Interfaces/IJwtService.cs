@@ -9,6 +9,6 @@ namespace App.Core.Interfaces
 {
     public interface IJwtService
     {
-        object GenarateToken(User user, string role);
+        object GenarateToken(User user, string role, string ApiKey);
     }
 }

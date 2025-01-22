@@ -14,6 +14,7 @@ namespace MovieApi.Controllers
     {
         private readonly IMediator _mediator;
         private readonly ILogger<MovieController> _logger;
+        //private readonly 
         public MovieController(IMediator mediator, ILogger<MovieController> logger)
         {
             _mediator = mediator;
@@ -51,6 +52,20 @@ namespace MovieApi.Controllers
         {
             var res = await _mediator.Send(new DeleteMovieCommand { Id = MovieId });
             return Ok(res);
+        }
+
+        [HttpGet("getSearchedMovie")]
+        public async Task<IActionResult> getAllMovies([FromQuery] string s, string apikey)
+        {
+             //Validate the API key
+            if (string.IsNullOrEmpty(apikey))
+            {
+                return Unauthorized(new { Message = "Invalid or missing API key" });
+            }
+
+            // Call the query with the search string
+            var allMovie = await _mediator.Send(new SearchMovieRequest { s = s });
+            return Ok(allMovie);
         }
     }
 }

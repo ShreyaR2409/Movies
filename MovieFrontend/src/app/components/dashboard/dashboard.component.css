@@ -1,0 +1,45 @@
+.outer-div {
+    background-color: #1c1c1c;
+    color: #f8f9fa;
+  }
+  
+  .dashboard-container {
+    padding: 2rem;
+  }
+
+  .movie-card {
+    background-color: #343a40;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  .movie-card img {
+    border-radius: 8px 8px 0 0;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .movie-card .card-title {
+    color: #f39c12;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+
+  .btn-primary,
+  .btn-success,
+  .btn-danger {
+    border: none;
+  }
+
+  .btn-primary:hover {
+    background-color: #d35400;
+  }
+
+  .btn-success:hover {
+    background-color: #27ae60;
+  }
+
+  .btn-danger:hover {
+    background-color: #c0392b;
+  }

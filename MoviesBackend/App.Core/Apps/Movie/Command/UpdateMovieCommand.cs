@@ -38,7 +38,7 @@ namespace App.Core.Apps.Movie.Command
                 return new
                 {
                     status = 404,
-                    message = "Movie  Data Cannot be null"
+                    message = "Movie Data Cannot be null"
             };
         }
 
@@ -58,12 +58,14 @@ namespace App.Core.Apps.Movie.Command
             {
                 ImgPath = await UploadImagesAsync(dto.PosterImg);
             }
+            else
+            {
+                ImgPath = IsExist.PosterImg;
+            }
 
-            var Movie = _mapper.Map<Domain.Entities.Movie>(IsExist);
-            //var Movie = dto.Adapt<Domain.Entities.Movie>();
-            //_mapper.Map(dto, IsExist);
+            var Movie = _mapper.Map(dto, IsExist);
             IsExist.PosterImg = ImgPath;
-            _appDbContext.Set<Domain.Entities.Movie>().Update(IsExist);
+            _appDbContext.Set<Domain.Entities.Movie>().Update(Movie);
             await _appDbContext.SaveChangesAsync();
             return new
             {

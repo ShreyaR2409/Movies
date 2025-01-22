@@ -10,8 +10,8 @@ namespace App.Core.Models
 {
     public class MovieDto
     {
-        public required string Title { get; set; }
-        public required string ReleaseYear { get; set; }
-        public required IFormFile PosterImg { get; set; }
+        public  string Title { get; set; }
+        public  string ReleaseYear { get; set; }
+        public  IFormFile? PosterImg { get; set; }
     }
 }
