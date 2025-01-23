@@ -12,23 +12,29 @@ namespace MovieApi.Controllers
     public class UserController : ControllerBase
     {
         private readonly IMediator _mediator;
-        public UserController(IMediator mediator)
+        private readonly ILogger<UserController> _logger;
+        public UserController(IMediator mediator, ILogger<UserController> logger)
         {
             _mediator = mediator;
+            _logger = logger;
         }
 
         [HttpPost("Register")]
         public async Task<IActionResult> RegisterUser(UserDto userDto)
         {
+            _logger.LogInformation("Register User Method Called with this Email: {Email}", userDto.Email);
             var res = await _mediator.Send( new CreateUserCommand { User = userDto} );
+            _logger.LogInformation("Response From Register User Api", res);
             return Ok(res);
         }
 
         [HttpPost("Login")]
         public async Task<IActionResult> Login(LoginDto loginDto)
         {
-            var result = await _mediator.Send(new LoginUserCommand { loginDto = loginDto });
-            return Ok(result);
+            _logger.LogInformation("Login Method Called for Email: {Email}", loginDto.Email);
+            var res = await _mediator.Send(new LoginUserCommand { loginDto = loginDto });
+            _logger.LogInformation("Response From Login User Api", res);
+            return Ok(res);
         }
     }
 }

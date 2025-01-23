@@ -10,14 +10,14 @@
           <label for="email" class="form-label">Email address</label>
           <input type="email" formControlName="Email" class="form-control" id="email" placeholder="Enter your email" required>
           <span class="text-small text-danger" *ngIf="LoginForm.get('Email')?.invalid && LoginForm.get('Email')?.touched">
-            Enter Valid Email Address
+            Please Enter Valid Email
           </span>
         </div>
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
           <input type="password" formControlName="Password" class="form-control" id="password" placeholder="Enter your password" required>
           <span class="text-small text-danger" *ngIf="LoginForm.get('Password')?.invalid && LoginForm.get('Password')?.touched">
-            Enter Valid Email Address
+            Please Enter Valid Password
           </span>
         </div>
         <button type="submit" class="btn btn-primary w-100" (click)="Login()">Log In</button>

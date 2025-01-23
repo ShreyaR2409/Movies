@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Angular\\Movies\\MoviesBackend\\Domain\\Domain.csproj": {}
+    "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "D:\\Angular\\Movies\\MoviesBackend\\Domain\\Domain.csproj": {
+    "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Angular\\Movies\\MoviesBackend\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Angular\\Movies\\MoviesBackend\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Angular\\Movies\\MoviesBackend\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\shreyaraut\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\shreyaraut\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MovieService } from '../../services/Movies/movie.service';
 import { CommonModule } from '@angular/common';
 import {
@@ -10,7 +10,9 @@ import {
 } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { debounceTime, Subject, switchMap, distinctUntilChanged } from 'rxjs';
-import * as bootstrap from 'bootstrap';
+import{Modal} from 'bootstrap';
+import { ActivatedRoute, Router } from '@angular/router';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @Component({
   selector: 'app-dashboard',
@@ -19,7 +21,7 @@ import * as bootstrap from 'bootstrap';
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css',
 })
-export class DashboardComponent implements OnInit, AfterViewInit {
+export class DashboardComponent implements OnInit {
   MoviesList: any;
   selectedFile: File | null = null;
   selectedUpdateFile: File | null = null;
@@ -32,10 +34,16 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   isAdmin : boolean = true;
   userRole: string | null = null;
   modal!: bootstrap.Modal;
+  page: number = 1;
+  total: number = 0;
+  @ViewChild('closebutton') closebutton : any;
+  @ViewChild('closebuttonupdate') closebuttonupdate : any;
 
   constructor(
     private movieservice: MovieService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private router : Router,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
@@ -50,31 +58,44 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         if (!query) {
           return this.movieservice.GetMovie(); 
         }
+        this.navigateToUrl(query);
         return this.movieservice.SearchMovie(query, this.apikey);  
       })
     )
     .subscribe({
       next: (response) => {
         this.MoviesList = response.data || [];
-        console.log("object", this.MoviesList);
       },
       error: (err) => {
         this.getAllMovie();
       },
     });
-  
   }
+  
+  AddMovieForm = new FormGroup({
+    Title: new FormControl('', [Validators.required]),
+    ReleaseYear: new FormControl('', [Validators.required,  Validators.minLength(4),      
+      Validators.maxLength(4) ]),
+    PosterImg: new FormControl('', [Validators.required]),
+  });
+
+  UpdateMovieForm = new FormGroup({
+    Title: new FormControl('', [Validators.required]),
+    ReleaseYear: new FormControl('', [Validators.required]),
+    PosterImg: new FormControl(''),
+  });
 
   onSearchChange(query: string) {
     this.searchSubject.next(query); 
   }
 
-  ngAfterViewInit(): void {
-    const modalElement = document.getElementById('addMovieModal') as HTMLElement;
-    if (modalElement) {
-      this.modal = new bootstrap.Modal(modalElement, { keyboard: false }); // Ensures proper initialization
-    }
-  }  
+  navigateToUrl(query: string) {
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: { s: query, apikey: this.apikey },
+      queryParamsHandling: 'merge',
+    });
+  } 
 
   isAdminFn(): boolean {
     console.log("Role",this.userRole )
@@ -87,17 +108,13 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     }
   }
 
-  AddMovieForm = new FormGroup({
-    Title: new FormControl('', [Validators.required]),
-    ReleaseYear: new FormControl('', [Validators.required]),
-    PosterImg: new FormControl('', [Validators.required]),
-  });
-
-  UpdateMovieForm = new FormGroup({
-    Title: new FormControl('', [Validators.required]),
-    ReleaseYear: new FormControl('', [Validators.required]),
-    PosterImg: new FormControl('', [Validators.required]),
-  });
+  validateMaxLength(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    if (input.value.length > 4) {
+      input.value = input.value.slice(0, 4); 
+      this.AddMovieForm.get('ReleaseYear')?.setValue(input.value);
+    }
+  }
 
   onFileSelected(event: any) {
     const file = event.target.files[0];
@@ -132,7 +149,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   UpdateMovie() {
     console.log('Update Movie Called');
     console.log(this.movieToUpdateId);
-
+    console.log(this.UpdateMovieForm.value);
     if (this.UpdateMovieForm.valid && this.movieToUpdateId !== null) {
       const formData = new FormData();
       formData.append('Title', this.UpdateMovieForm.get('Title')?.value || '');
@@ -149,6 +166,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
           if (data.status === 200) {
             this.toastr.success(data.message, 'Success');
             this.getAllMovie();
+            this.closebuttonupdate.nativeElement.click();
           } else {
             this.toastr.error(data.message, 'Error');
           }
@@ -160,16 +178,15 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     }
   }
 
-  hideModal() {
-    if (this.modal) {
-      this.modal.hide(); // Use the modal instance to hide it
-    }
+  ResetForm(){
+    this.AddMovieForm.reset();
   }
-  
-  
 
   AddMovie() {
     console.log(this.AddMovieForm.value);
+    console.log(this.AddMovieForm.valid);  
+    console.log(this.AddMovieForm);  
+
     if (this.AddMovieForm.valid) {
       const formData = new FormData();
       formData.append('Title', this.AddMovieForm.get('Title')?.value || '');
@@ -185,14 +202,20 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         next: (data) => {
           if (data.status == 200) {
             this.toastr.success(data.message, 'Success');
-            // const modalElement = document.getElementById('addMovieModal') as HTMLElement;
-            // console.log(modalElement);  // Log to see if the modal is found
+            this.AddMovieForm.reset();
+            // this.hideModal();
+            this.closebutton.nativeElement.click();
+            const modalElement = document.getElementById('addMovieModal');
+            console.log("modalElement",modalElement);
             
-            // if (modalElement) {
-            //   const modal = new bootstrap.Modal(modalElement);
-            //   modal.hide();
-            // }
-            this.hideModal();
+            if (modalElement) {
+              const modalInstance = Modal.getInstance(modalElement);
+              if (modalInstance) {
+                console.log("Hide method called");                
+                const value = modalInstance.hide();
+                console.log(value, "value");                
+              }
+            }
           } else {
             this.toastr.error(data.message, 'Error');
           }
@@ -222,8 +245,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         },
       });
     }
-  }
-  
+  }  
 
   getAllMovie() {
     this.movieservice.GetMovie().subscribe({

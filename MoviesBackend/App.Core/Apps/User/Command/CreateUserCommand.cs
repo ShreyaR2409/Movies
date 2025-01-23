@@ -27,40 +27,63 @@ namespace App.Core.Apps.User.Command
 
         public async Task<object> Handle(CreateUserCommand command, CancellationToken cancellationToken)
         {
-            var dto = command.User;
-            if (dto == null)
+            try
             {
+                var dto = command.User;
+                if (dto == null)
+                {
+                    return new
+                    {
+                        status = 404,
+                        message = "User Data cannot be null"
+                    };
+                }
+
+                var IsExist = await _appDbContext.Set<Domain.Entities.User>().FirstOrDefaultAsync(x => x.Email == dto.Email);
+                if (IsExist != null)
+                {
+                    return new
+                    {
+                        status = 409,
+                        message = "Email Already Exist"
+                    };
+                }
+
+                var NewUser = _mapper.Map<Domain.Entities.User>(dto);
+                NewUser.Password = HashPassword(dto.Password);
+
+                Guid key = Guid.NewGuid();
+                var ApiKey = key.ToString();
+                NewUser.ApiKey = ApiKey;
+
+                await _appDbContext.Set<Domain.Entities.User>().AddAsync(NewUser);
+                await _appDbContext.SaveChangesAsync();
                 return new
                 {
-                    status = 404,
-                    message = "User Data cannot be null"
+                    status = 200,
+                    message = "User Registered Successfully"
                 };
             }
-
-            var IsExist = await _appDbContext.Set<Domain.Entities.User>().FirstOrDefaultAsync(x => x.Email == dto.Email);
-            if (IsExist != null)
+            catch (DbUpdateException dbEx)
             {
+                // Handle database update exceptions
                 return new
                 {
-                    status = 409,
-                    message = "Email Already Exist"
+                    status = 500,
+                    message = "An error occurred while saving the user to the database.",
+                    details = dbEx.Message
                 };
             }
-
-            var NewUser = _mapper.Map<Domain.Entities.User>(dto);
-            NewUser.Password = HashPassword(dto.Password);
-
-            Guid key = Guid.NewGuid();
-            var ApiKey = key.ToString();
-            NewUser.ApiKey = ApiKey;
-
-            await _appDbContext.Set<Domain.Entities.User>().AddAsync(NewUser);
-            await _appDbContext.SaveChangesAsync();
-            return new
+            catch (Exception ex)
             {
-                status = 200,
-                message = "User Registered Successfully"
-            };
+                // Handle other exceptions
+                return new
+                {
+                    status = 500,
+                    message = "An unexpected error occurred.",
+                    details = ex.Message
+                };
+            }
         }
 
         public string HashPassword(string password)

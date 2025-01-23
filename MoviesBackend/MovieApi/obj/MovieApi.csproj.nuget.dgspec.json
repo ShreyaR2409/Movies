@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Angular\\Movies\\MoviesBackend\\MovieApi\\MovieApi.csproj": {}
+    "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\MovieApi\\MovieApi.csproj": {}
   },
   "projects": {
-    "D:\\Angular\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj": {
+    "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Angular\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj",
+        "projectUniqueName": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj",
         "projectName": "App.Core",
-        "projectPath": "D:\\Angular\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Angular\\Movies\\MoviesBackend\\App.Core\\obj\\",
+        "projectPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj",
+        "packagesPath": "C:\\Users\\shreyaraut\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\shreyaraut\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,8 +29,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Angular\\Movies\\MoviesBackend\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\Angular\\Movies\\MoviesBackend\\Domain\\Domain.csproj"
+              "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj"
               }
             }
           }
@@ -99,17 +99,17 @@
         }
       }
     },
-    "D:\\Angular\\Movies\\MoviesBackend\\Domain\\Domain.csproj": {
+    "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Angular\\Movies\\MoviesBackend\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Angular\\Movies\\MoviesBackend\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Angular\\Movies\\MoviesBackend\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\shreyaraut\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\shreyaraut\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -160,17 +160,17 @@
         }
       }
     },
-    "D:\\Angular\\Movies\\MoviesBackend\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Angular\\Movies\\MoviesBackend\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "D:\\Angular\\Movies\\MoviesBackend\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Angular\\Movies\\MoviesBackend\\Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\shreyaraut\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\shreyaraut\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -185,8 +185,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Angular\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj": {
-                "projectPath": "D:\\Angular\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj"
+              "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj": {
+                "projectPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj"
               }
             }
           }
@@ -251,17 +251,17 @@
         }
       }
     },
-    "D:\\Angular\\Movies\\MoviesBackend\\MovieApi\\MovieApi.csproj": {
+    "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\MovieApi\\MovieApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Angular\\Movies\\MoviesBackend\\MovieApi\\MovieApi.csproj",
+        "projectUniqueName": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\MovieApi\\MovieApi.csproj",
         "projectName": "MovieApi",
-        "projectPath": "D:\\Angular\\Movies\\MoviesBackend\\MovieApi\\MovieApi.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\Angular\\Movies\\MoviesBackend\\MovieApi\\obj\\",
+        "projectPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\MovieApi\\MovieApi.csproj",
+        "packagesPath": "C:\\Users\\shreyaraut\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\MovieApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\shreyaraut\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -276,11 +276,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Angular\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj": {
-                "projectPath": "D:\\Angular\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj"
+              "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj": {
+                "projectPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj"
               },
-              "D:\\Angular\\Movies\\MoviesBackend\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "D:\\Angular\\Movies\\MoviesBackend\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }

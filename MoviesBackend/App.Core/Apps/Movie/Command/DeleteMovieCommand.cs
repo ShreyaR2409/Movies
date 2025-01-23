@@ -22,25 +22,49 @@ namespace App.Core.Apps.Movie.Command
         }
         public async Task<object> Handle(DeleteMovieCommand command, CancellationToken cancellationToken)
         {
-            var IsExist = await _appDbContext.Set<Domain.Entities.Movie>().FirstOrDefaultAsync(x => x.MovieId == command.Id && x.IsDeleted == false);
-            if(IsExist == null)
+            try
             {
+                var IsExist = await _appDbContext.Set<Domain.Entities.Movie>().FirstOrDefaultAsync(x => x.MovieId == command.Id && x.IsDeleted == false);
+                if (IsExist == null)
+                {
+                    return new
+                    {
+                        status = 404,
+                        message = "Id not present or Already Deleted"
+
+                    };
+                }
+
+                IsExist.IsDeleted = true;
+                _appDbContext.Set<Domain.Entities.Movie>().Update(IsExist);
+                await _appDbContext.SaveChangesAsync();
                 return new
                 {
-                    status = 404,
-                    message = "Id not present or Already Deleted"
-
+                    status = 200,
+                    message = "Movie Deleted Successfully"
                 };
             }
-
-            IsExist.IsDeleted = true;
-            _appDbContext.Set<Domain.Entities.Movie>().Update(IsExist);
-            await _appDbContext.SaveChangesAsync();
-            return new
+            catch (DbUpdateException dbEx)
             {
-                status = 200,
-                message = "Movie Deleted Successfully"
-            };
+                // Handle database update exceptions
+                return new
+                {
+                    status = 500,
+                    message = "An error occurred while updating the database.",
+                    details = dbEx.Message
+                };
+            }
+            catch (Exception ex)
+            {
+                // Handle other exceptions
+                return new
+                {
+                    status = 500,
+                    message = "An unexpected error occurred.",
+                    details = ex.Message
+                };
+            }
         }
+
     }
 }

@@ -29,33 +29,60 @@ namespace App.Core.Apps.Movie.Command
 
         public async Task<object> Handle(AddMovieCommand command, CancellationToken cancellationToken)
         {
-            var dto = command.Movie;
-            var IsExist = await _appDbContext.Set<Domain.Entities.Movie>().FirstOrDefaultAsync(x => x.Title == dto.Title && x.ReleaseYear == dto.ReleaseYear);
-            if (IsExist != null) {
-                var response = new
-                {
-                    status = 409,
-                    message = "Movie Already Exist"
-                };
-                return response;
-            }
-
-            string ImgPath = null;
-
-            if (dto.PosterImg != null) {
-                ImgPath = await UploadImagesAsync(dto.PosterImg);
-            }
-
-            var Movie = _mapper.Map<Domain.Entities.Movie>(dto);
-            //var Movie = dto.Adapt<Domain.Entities.Movie>();
-            Movie.PosterImg = ImgPath;
-            await _appDbContext.Set<Domain.Entities.Movie>().AddAsync(Movie);
-            await _appDbContext.SaveChangesAsync();
-            return new
+            try
             {
-                status = 200,
-                message = "Movie Added Successfully"
-            };
+                var dto = command.Movie;
+                var IsExist = await _appDbContext.Set<Domain.Entities.Movie>().FirstOrDefaultAsync(x => x.Title == dto.Title && x.ReleaseYear == dto.ReleaseYear);
+                if (IsExist != null)
+                {
+                    var response = new
+                    {
+                        status = 409,
+                        message = "Movie Already Exist"
+                    };
+                    return response;
+                }
+
+                string ImgPath = null;
+
+                if (dto.PosterImg != null)
+                {
+                    ImgPath = await UploadImagesAsync(dto.PosterImg);
+                }
+                else
+                {
+                    ImgPath = Path.Combine("uploads", "DefaultPoster.png");
+                }
+
+                var Movie = _mapper.Map<Domain.Entities.Movie>(dto);
+                //var Movie = dto.Adapt<Domain.Entities.Movie>();
+                Movie.PosterImg = ImgPath;
+                await _appDbContext.Set<Domain.Entities.Movie>().AddAsync(Movie);
+                await _appDbContext.SaveChangesAsync();
+                return new
+                {
+                    status = 200,
+                    message = "Movie Added Successfully"
+                };
+            }
+            catch (DbUpdateException dbEx)
+            {
+                return new
+                {
+                    status = 500,
+                    message = "An error occurred while saving to the database.",
+                    details = dbEx.Message
+                };
+            }
+            catch (Exception ex)
+            {
+                return new
+                {
+                    status = 500,
+                    message = "An unexpected error occurred.",
+                    details = ex.Message
+                };
+            }
         }
         private async Task<string?> UploadImagesAsync(IFormFile profileimage)
         {

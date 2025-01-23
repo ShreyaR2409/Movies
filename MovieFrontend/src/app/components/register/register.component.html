@@ -27,7 +27,7 @@
             </span>
           </div>
           <div class="mb-3">
-            <label for="email" class="form-label">Email Address</label>
+            <label for="email" class="form-label">Email</label>
             <input type="email" formControlName="email" class="form-control" id="email" placeholder="Enter your email" required>
             <span class="text-danger" *ngIf="RegistrationForm.get('email')?.invalid && RegistrationForm.get('email')?.touched">
               Email is required
@@ -40,10 +40,6 @@
               Password must be of 6 digit and contain alpha numeric value
             </span>
           </div>
-          <!-- <div class="mb-3">
-            <label for="retype-password" class="form-label">Retype Password</label>
-            <input type="password" class="form-control" id="retype-password" placeholder="Retype your password" required>
-          </div> -->
           <div class="mb-3">
             <label for="role" class="form-label">Role</label>
             <select class="form-select" formControlName="roleId" id="role" required>

@@ -21,7 +21,6 @@ export class LoginComponent {
   })
 
   Login() {
-    console.log(this.LoginForm.value);
     if (this.LoginForm.valid) {
       this.userservice.UserLogin(this.LoginForm.value).subscribe({
         next: (data => {

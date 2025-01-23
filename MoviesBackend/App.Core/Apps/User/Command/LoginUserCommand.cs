@@ -28,33 +28,56 @@ namespace App.Core.Apps.User.Command
 
         public async Task<object> Handle(LoginUserCommand command, CancellationToken cancellationToken)
         {
-            var dto = command.loginDto;
-            var ValidEmail = _appDbContext.Set<Domain.Entities.User>().FirstOrDefault(x => x.Email == dto.Email);
-            if (ValidEmail == null || !VerifyPassword(dto.Password , ValidEmail.Password))
+            try
             {
+                var dto = command.loginDto;
+                var ValidEmail = _appDbContext.Set<Domain.Entities.User>().FirstOrDefault(x => x.Email == dto.Email);
+                if (ValidEmail == null || !VerifyPassword(dto.Password, ValidEmail.Password))
+                {
+                    return new
+                    {
+                        status = 404,
+                        message = "Invalid Email or Password"
+                    };
+                }
+
+                var role = await _appDbContext.Set<Domain.Entities.Role>().FirstOrDefaultAsync(r => r.RoleId == ValidEmail.RoleId);
+                if (role == null)
+                {
+                    return new
+                    {
+                        status = 404,
+                        message = "Role Not Found"
+                    };
+                }
+
                 return new
                 {
-                    status = 404,
-                    message = "Invalid Email or Password"
+                    status = 200,
+                    message = "User Login Successfully",
+                    Token = _jwtService.GenarateToken(ValidEmail, role.RoleType, ValidEmail.ApiKey)
                 };
             }
-
-            var role = await _appDbContext.Set<Domain.Entities.Role>().FirstOrDefaultAsync(r => r.RoleId == ValidEmail.RoleId);
-            if (role == null)
+            catch (DbUpdateException dbEx)
             {
+                // Handle database update exceptions
                 return new
                 {
-                    status = 404,
-                    message = "Role Not Found"
+                    status = 500,
+                    message = "An error occurred while accessing the database.",
+                    details = dbEx.Message
                 };
             }
-
-            return new
+            catch (Exception ex)
             {
-                status = 200,
-                message = "User Login Successfully",
-                Token = _jwtService.GenarateToken(ValidEmail, role.RoleType, ValidEmail.ApiKey)
-            };
+                // Handle other exceptions
+                return new
+                {
+                    status = 500,
+                    message = "An unexpected error occurred.",
+                    details = ex.Message
+                };
+            }
         }
         public bool VerifyPassword(string plainTextPassword, string hashedPassword)
         {

@@ -13,7 +13,7 @@ export const appConfig: ApplicationConfig = {
     ,provideAnimationsAsync(),    
     provideToastr({ 
       timeOut: 3000,
-      positionClass: 'toast-top-right',
+      positionClass: 'toast-bottom-right',
       preventDuplicates: true,
       progressBar: true, 
       easing: 'ease-in-out',

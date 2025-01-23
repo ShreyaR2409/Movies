@@ -4,6 +4,7 @@ using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,47 +33,67 @@ namespace App.Core.Apps.Movie.Command
 
         public async Task<object> Handle(UpdateMovieCommand command, CancellationToken cancellationToken)
         {
-            var dto = command.Movie;
-            if (dto == null)
+            try
             {
-                return new
+                var dto = command.Movie;
+                if (dto == null)
                 {
-                    status = 404,
-                    message = "Movie Data Cannot be null"
-            };
-        }
+                    return new
+                    {
+                        status = 404,
+                        message = "Movie Data Cannot be null"
+                    };
+                }
 
-            var IsExist = await _appDbContext.Set<Domain.Entities.Movie>().FirstOrDefaultAsync(p => p.MovieId == command.Id);
-            if (IsExist == null)
-            {
+                var IsExist = await _appDbContext.Set<Domain.Entities.Movie>().FirstOrDefaultAsync(p => p.MovieId == command.Id);
+                if (IsExist == null)
+                {
+                    return new
+                    {
+                        status = 404,
+                        message = "Movie with this Id not found"
+                    };
+                }
+
+                string ImgPath = null;
+
+                if (dto.PosterImg != null)
+                {
+                    ImgPath = await UploadImagesAsync(dto.PosterImg);
+                }
+                else
+                {
+                    ImgPath = IsExist.PosterImg;
+                }
+
+                var Movie = _mapper.Map(dto, IsExist);
+                IsExist.PosterImg = ImgPath;
+                _appDbContext.Set<Domain.Entities.Movie>().Update(Movie);
+                await _appDbContext.SaveChangesAsync();
                 return new
                 {
-                    status = 404,
-                    message = "Movie with this Id not found"
+                    status = 200,
+                    message = "Movie Updated Successfully"
                 };
             }
-
-            string ImgPath = null;
-
-            if (dto.PosterImg != null)
+            catch (DbUpdateException dbEx)
             {
-                ImgPath = await UploadImagesAsync(dto.PosterImg);
+                return new
+                {
+                    status = 500,
+                    message = "An error occurred while updating the database.",
+                    details = dbEx.Message
+                };
             }
-            else
+            catch (Exception ex)
             {
-                ImgPath = IsExist.PosterImg;
+                return new
+                {
+                    status = 500,
+                    message = "An unexpected error occurred.",
+                    details = ex.Message
+                };
             }
-
-            var Movie = _mapper.Map(dto, IsExist);
-            IsExist.PosterImg = ImgPath;
-            _appDbContext.Set<Domain.Entities.Movie>().Update(Movie);
-            await _appDbContext.SaveChangesAsync();
-            return new
-            {
-                status = 200,
-                message = "Movie Updated Successfully"
-            }; 
-
         }
 
         private async Task<string?> UploadImagesAsync(IFormFile profileimage)

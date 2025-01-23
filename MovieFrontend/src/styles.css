@@ -1,36 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
-body, html {
+
+html {
+  background-color: #1c1c1c;
   height: 100%;
   margin: 0;
-  background-color: #1c1c1c;
 }
 
 .toast-success {
-    background-color: #4CAF50 !important; /* Green for success */
-    color: white !important;
-    padding: 10px;
-  }
-  
-  .toast-error {
-    background-color: #F44336 !important; 
-    color: white !important;
-    padding: 10px;
-  }
-  
-  .toast-info {
-    background-color: #2196F3 !important; 
-    color: white !important;
-    padding: 10px;
-  }
-  
-  .toast-warning {
-    background-color: #FFC107 !important;
-    color: black !important;
-    padding: 10px;
-  }
-  
-  .toast-top-right {
+  background-color: #4CAF50 !important;
+  color: white !important;
+  padding: 10px;
+}
+
+.toast-error {
+  background-color: #F44336 !important;
+  color: white !important;
+  padding: 10px;
+}
+
+.toast-info {
+  background-color: #2196F3 !important;
+  color: white !important;
+  padding: 10px;
+}
+
+.toast-warning {
+  background-color: #FFC107 !important;
+  color: black !important;
+  padding: 10px;
+}
+
+/* .toast-bottom-right {
     top: 12px;
     right: 12px;
-  }
-  
+  } */

@@ -25,12 +25,14 @@ namespace App.Core.Apps.Movie.Query
 
         public async Task<object> Handle(SearchMovieRequest request, CancellationToken cancellationToken)
         {
-            var auth = await _appDbContext.Set<Domain.Entities.User>().FirstOrDefaultAsync(x=> x.ApiKey == request.apikey);
+            try
+            {
+                var auth = await _appDbContext.Set<Domain.Entities.User>().FirstOrDefaultAsync(x => x.ApiKey == request.apikey);
             if (auth == null)
             {
                 return new
                 {
-                    status = 404,
+                    status = 401,
                     message = "Not Authorized"
                 };
             }
@@ -50,6 +52,25 @@ namespace App.Core.Apps.Movie.Query
                 Message = "Filtered Movie Data",
                 Data = allMovieData
             };
+        }
+            catch (DbUpdateException dbEx)
+            {
+                return new
+                {
+                    status = 500,
+                    message = "An error occurred while fetching movies from the database.",
+                    details = dbEx.Message
+                };
+            }
+            catch (Exception ex)
+            {
+                return new
+                {
+                    status = 500,
+                    message = "An unexpected error occurred.",
+                    details = ex.Message
+                };
+            }
         }
     }
 }

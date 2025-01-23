@@ -4,6 +4,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AuthGuard } from './guard/auth.guard';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 export const routes: Routes = [
     {
         component: LoginComponent,
@@ -28,4 +29,8 @@ export const routes: Routes = [
             }
         ]
     },
+    {
+        path: '**',
+        component : NotfoundComponent
+    }
 ];

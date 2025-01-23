@@ -22,13 +22,36 @@ namespace App.Core.Apps.Movie.Query
         }
         public async Task<object> Handle(GetMoviesRequest request, CancellationToken cancellationToken)
         {
-            var result = await _appDbContext.Set<Domain.Entities.Movie>().Where(x => x.IsDeleted == false).ToListAsync(cancellationToken);
-            return new
+            try
             {
-                status = 200,
-                message = "Movies Fetched Successfully",
-                Data = result
-            };
+                var result = await _appDbContext
+                    .Set<Domain.Entities.Movie>()
+                    .Where(x => x.IsDeleted == false).ToListAsync(cancellationToken);
+                return new
+                {
+                    status = 200,
+                    message = "Movies Fetched Successfully",
+                    Data = result
+                };
+            }
+            catch (DbUpdateException dbEx)
+            {
+                return new
+                {
+                    status = 500,
+                    message = "An error occurred while fetching movies from the database.",
+                    details = dbEx.Message
+                };
+            }
+            catch (Exception ex)
+            {
+                return new
+                {
+                    status = 500,
+                    message = "An unexpected error occurred.",
+                    details = ex.Message
+                };
+            }
         }
     }
 }
