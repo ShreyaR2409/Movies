@@ -20,7 +20,7 @@ export class MovieService {
   }
 
   public DeleteMovie(id : any) : Observable<any>{
-    return this.http.delete(`${this.url}Delete-Movie`);
+    return this.http.delete(`${this.url}Delete-Movie?MovieId=${id}`);
   }
 
   public GetMovie():Observable<any>{

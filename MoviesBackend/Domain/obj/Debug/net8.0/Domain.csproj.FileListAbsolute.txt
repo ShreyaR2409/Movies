@@ -33,3 +33,15 @@ C:\Users\shreyaraut\Notes\FinalAssessment\Movies\MoviesBackend\Domain\obj\Debug\
 C:\Users\shreyaraut\Notes\FinalAssessment\Movies\MoviesBackend\Domain\obj\Debug\net8.0\refint\Domain.dll
 C:\Users\shreyaraut\Notes\FinalAssessment\Movies\MoviesBackend\Domain\obj\Debug\net8.0\Domain.pdb
 C:\Users\shreyaraut\Notes\FinalAssessment\Movies\MoviesBackend\Domain\obj\Debug\net8.0\ref\Domain.dll
+D:\Angular\Movies\MoviesBackend\Domain\bin\Debug\net8.0\Domain.deps.json
+D:\Angular\Movies\MoviesBackend\Domain\bin\Debug\net8.0\Domain.dll
+D:\Angular\Movies\MoviesBackend\Domain\bin\Debug\net8.0\Domain.pdb
+D:\Angular\Movies\MoviesBackend\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Angular\Movies\MoviesBackend\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+D:\Angular\Movies\MoviesBackend\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+D:\Angular\Movies\MoviesBackend\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+D:\Angular\Movies\MoviesBackend\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+D:\Angular\Movies\MoviesBackend\Domain\obj\Debug\net8.0\Domain.dll
+D:\Angular\Movies\MoviesBackend\Domain\obj\Debug\net8.0\refint\Domain.dll
+D:\Angular\Movies\MoviesBackend\Domain\obj\Debug\net8.0\Domain.pdb
+D:\Angular\Movies\MoviesBackend\Domain\obj\Debug\net8.0\ref\Domain.dll

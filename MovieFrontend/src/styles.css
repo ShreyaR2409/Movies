@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color: #1c1c1c;
+}
+
 .toast-success {
     background-color: #4CAF50 !important; /* Green for success */
     color: white !important;

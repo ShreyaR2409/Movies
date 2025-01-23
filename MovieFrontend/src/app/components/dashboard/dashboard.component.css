@@ -43,3 +43,11 @@
   .btn-danger:hover {
     background-color: #c0392b;
   }
+
+  .no-movie-found {
+    text-align: center;
+    font-size: 1.25rem;
+    color: #f39c12;
+    margin-top: 2rem;
+    font-weight: bold;
+  }

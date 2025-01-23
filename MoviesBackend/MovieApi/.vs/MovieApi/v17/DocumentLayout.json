@@ -1,53 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\MovieApi\\",
+  "WorkspaceRootPath": "D:\\Angular\\Movies\\MoviesBackend\\MovieApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2406B876-B8D2-4631-B24B-3570C907E0D4}|..\\App.Core\\App.Core.csproj|c:\\users\\shreyaraut\\notes\\finalassessment\\movies\\moviesbackend\\app.core\\apps\\movie\\query\\searchmovierequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2406B876-B8D2-4631-B24B-3570C907E0D4}|..\\App.Core\\App.Core.csproj|d:\\angular\\movies\\moviesbackend\\app.core\\apps\\movie\\query\\searchmovierequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5793E4B1-0534-45C3-8FFE-726B8EEC2BE9}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\shreyaraut\\notes\\finalassessment\\movies\\moviesbackend\\infrastructure\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2406B876-B8D2-4631-B24B-3570C907E0D4}|..\\App.Core\\App.Core.csproj|d:\\angular\\movies\\moviesbackend\\app.core\\apps\\movie\\command\\addmoviecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2406B876-B8D2-4631-B24B-3570C907E0D4}|..\\App.Core\\App.Core.csproj|c:\\users\\shreyaraut\\notes\\finalassessment\\movies\\moviesbackend\\app.core\\apps\\movie\\command\\addmoviecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3351E63E-6B20-4559-9EB1-25874C42C766}|MovieApi.csproj|c:\\users\\shreyaraut\\notes\\finalassessment\\movies\\moviesbackend\\movieapi\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3351E63E-6B20-4559-9EB1-25874C42C766}|MovieApi.csproj|d:\\angular\\movies\\moviesbackend\\movieapi\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3351E63E-6B20-4559-9EB1-25874C42C766}|MovieApi.csproj|solutionrelative:controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2406B876-B8D2-4631-B24B-3570C907E0D4}|..\\App.Core\\App.Core.csproj|c:\\users\\shreyaraut\\notes\\finalassessment\\movies\\moviesbackend\\app.core\\apps\\user\\command\\loginusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2406B876-B8D2-4631-B24B-3570C907E0D4}|..\\App.Core\\App.Core.csproj|d:\\angular\\movies\\moviesbackend\\app.core\\apps\\movie\\command\\deletemoviecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2406B876-B8D2-4631-B24B-3570C907E0D4}|..\\App.Core\\App.Core.csproj|c:\\users\\shreyaraut\\notes\\finalassessment\\movies\\moviesbackend\\app.core\\interfaces\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2406B876-B8D2-4631-B24B-3570C907E0D4}|..\\App.Core\\App.Core.csproj|d:\\angular\\movies\\moviesbackend\\app.core\\apps\\movie\\command\\updatemoviecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2406B876-B8D2-4631-B24B-3570C907E0D4}|..\\App.Core\\App.Core.csproj|c:\\users\\shreyaraut\\notes\\finalassessment\\movies\\moviesbackend\\app.core\\models\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\Infrastructure\\Migrations\\20250122094157_Apikey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2406B876-B8D2-4631-B24B-3570C907E0D4}|..\\App.Core\\App.Core.csproj|c:\\users\\shreyaraut\\notes\\finalassessment\\movies\\moviesbackend\\app.core\\apps\\user\\command\\createusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2406B876-B8D2-4631-B24B-3570C907E0D4}|..\\App.Core\\App.Core.csproj|c:\\users\\shreyaraut\\notes\\finalassessment\\movies\\moviesbackend\\app.core\\models\\moviedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2ACE6C27-3A93-4226-AA13-15B737737DB3}|..\\Domain\\Domain.csproj|c:\\users\\shreyaraut\\notes\\finalassessment\\movies\\moviesbackend\\domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3351E63E-6B20-4559-9EB1-25874C42C766}|MovieApi.csproj|c:\\users\\shreyaraut\\notes\\finalassessment\\movies\\moviesbackend\\movieapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3351E63E-6B20-4559-9EB1-25874C42C766}|MovieApi.csproj|d:\\angular\\movies\\moviesbackend\\movieapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3351E63E-6B20-4559-9EB1-25874C42C766}|MovieApi.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2406B876-B8D2-4631-B24B-3570C907E0D4}|..\\App.Core\\App.Core.csproj|c:\\users\\shreyaraut\\notes\\finalassessment\\movies\\moviesbackend\\app.core\\models\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2406B876-B8D2-4631-B24B-3570C907E0D4}|..\\App.Core\\App.Core.csproj|c:\\users\\shreyaraut\\notes\\finalassessment\\movies\\moviesbackend\\app.core\\validators\\userdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2ACE6C27-3A93-4226-AA13-15B737737DB3}|..\\Domain\\Domain.csproj|c:\\users\\shreyaraut\\notes\\finalassessment\\movies\\moviesbackend\\domain\\entities\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5793E4B1-0534-45C3-8FFE-726B8EEC2BE9}|..\\Infrastructure\\Infrastructure.csproj|d:\\angular\\movies\\moviesbackend\\infrastructure\\migrations\\20250122135840_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -57,202 +33,93 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AddMovieCommand.cs",
-              "DocumentMoniker": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Command\\AddMovieCommand.cs",
-              "RelativeDocumentMoniker": "..\\App.Core\\Apps\\Movie\\Command\\AddMovieCommand.cs",
-              "ToolTip": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Command\\AddMovieCommand.cs",
-              "RelativeToolTip": "..\\App.Core\\Apps\\Movie\\Command\\AddMovieCommand.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAIwEoAAAAdAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "SearchMovieRequest.cs",
+              "DocumentMoniker": "D:\\Angular\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Query\\SearchMovieRequest.cs",
+              "RelativeDocumentMoniker": "..\\App.Core\\Apps\\Movie\\Query\\SearchMovieRequest.cs",
+              "ToolTip": "D:\\Angular\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Query\\SearchMovieRequest.cs",
+              "RelativeToolTip": "..\\App.Core\\Apps\\Movie\\Query\\SearchMovieRequest.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAAADEAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T12:07:51.145Z",
+              "WhenOpened": "2025-01-22T17:11:46.634Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IJwtService.cs",
-              "DocumentMoniker": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\App.Core\\Interfaces\\IJwtService.cs",
-              "RelativeDocumentMoniker": "..\\App.Core\\Interfaces\\IJwtService.cs",
-              "ToolTip": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\App.Core\\Interfaces\\IJwtService.cs",
-              "RelativeToolTip": "..\\App.Core\\Interfaces\\IJwtService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "MovieController.cs",
+              "DocumentMoniker": "D:\\Angular\\Movies\\MoviesBackend\\MovieApi\\Controllers\\MovieController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MovieController.cs",
+              "ToolTip": "D:\\Angular\\Movies\\MoviesBackend\\MovieApi\\Controllers\\MovieController.cs",
+              "RelativeToolTip": "Controllers\\MovieController.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAAAEQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T09:47:59.227Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-22T17:11:01.476Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DeleteMovieCommand.cs",
+              "DocumentMoniker": "D:\\Angular\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Command\\DeleteMovieCommand.cs",
+              "RelativeDocumentMoniker": "..\\App.Core\\Apps\\Movie\\Command\\DeleteMovieCommand.cs",
+              "ToolTip": "D:\\Angular\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Command\\DeleteMovieCommand.cs",
+              "RelativeToolTip": "..\\App.Core\\Apps\\Movie\\Command\\DeleteMovieCommand.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowBkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T16:53:15.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UpdateMovieCommand.cs",
+              "DocumentMoniker": "D:\\Angular\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Command\\UpdateMovieCommand.cs",
+              "RelativeDocumentMoniker": "..\\App.Core\\Apps\\Movie\\Command\\UpdateMovieCommand.cs",
+              "ToolTip": "D:\\Angular\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Command\\UpdateMovieCommand.cs",
+              "RelativeToolTip": "..\\App.Core\\Apps\\Movie\\Command\\UpdateMovieCommand.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwB4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T16:41:43.489Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "JwtService.cs",
-              "DocumentMoniker": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\Infrastructure\\Services\\JwtService.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Services\\JwtService.cs",
-              "ToolTip": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\Infrastructure\\Services\\JwtService.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Services\\JwtService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwCgAAAA4AAAAAAAAAA==",
+              "Title": "AddMovieCommand.cs",
+              "DocumentMoniker": "D:\\Angular\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Command\\AddMovieCommand.cs",
+              "RelativeDocumentMoniker": "..\\App.Core\\Apps\\Movie\\Command\\AddMovieCommand.cs",
+              "ToolTip": "D:\\Angular\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Command\\AddMovieCommand.cs",
+              "RelativeToolTip": "..\\App.Core\\Apps\\Movie\\Command\\AddMovieCommand.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAqwCEAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T09:44:29.195Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "20250122094157_Apikey.cs",
-              "DocumentMoniker": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\Infrastructure\\Migrations\\20250122094157_Apikey.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Migrations\\20250122094157_Apikey.cs",
-              "ToolTip": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\Infrastructure\\Migrations\\20250122094157_Apikey.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Migrations\\20250122094157_Apikey.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T09:41:57.405Z",
+              "WhenOpened": "2025-01-22T16:19:39.205Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\App.Core\\Models\\UserDto.cs",
-              "RelativeDocumentMoniker": "..\\App.Core\\Models\\UserDto.cs",
-              "ToolTip": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\App.Core\\Models\\UserDto.cs",
-              "RelativeToolTip": "..\\App.Core\\Models\\UserDto.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
+              "Title": "20250122135840_init.cs",
+              "DocumentMoniker": "D:\\Angular\\Movies\\MoviesBackend\\Infrastructure\\Migrations\\20250122135840_init.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Migrations\\20250122135840_init.cs",
+              "ToolTip": "D:\\Angular\\Movies\\MoviesBackend\\Infrastructure\\Migrations\\20250122135840_init.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Migrations\\20250122135840_init.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T09:39:54.808Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-22T13:58:40.778Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\Domain\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Entities\\User.cs",
-              "ToolTip": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\Domain\\Entities\\User.cs",
-              "RelativeToolTip": "..\\Domain\\Entities\\User.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T09:38:48.286Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SearchMovieRequest.cs",
-              "DocumentMoniker": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Query\\SearchMovieRequest.cs",
-              "RelativeDocumentMoniker": "..\\App.Core\\Apps\\Movie\\Query\\SearchMovieRequest.cs",
-              "ToolTip": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Query\\SearchMovieRequest.cs",
-              "RelativeToolTip": "..\\App.Core\\Apps\\Movie\\Query\\SearchMovieRequest.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAwwCcAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T09:17:53.39Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "LoginDto.cs",
-              "DocumentMoniker": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\App.Core\\Models\\LoginDto.cs",
-              "RelativeDocumentMoniker": "..\\App.Core\\Models\\LoginDto.cs",
-              "ToolTip": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\App.Core\\Models\\LoginDto.cs",
-              "RelativeToolTip": "..\\App.Core\\Models\\LoginDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T09:00:26.887Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MovieController.cs",
-              "DocumentMoniker": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\MovieApi\\Controllers\\MovieController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MovieController.cs",
-              "ToolTip": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\MovieApi\\Controllers\\MovieController.cs",
-              "RelativeToolTip": "Controllers\\MovieController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAiwCYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T07:29:30.189Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 5,
               "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\MovieApi\\Controllers\\UserController.cs",
+              "DocumentMoniker": "D:\\Angular\\Movies\\MoviesBackend\\MovieApi\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\MovieApi\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\Angular\\Movies\\MoviesBackend\\MovieApi\\Controllers\\UserController.cs",
               "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwB0AAABZAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAADwvxkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T07:09:24.793Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UserDtoValidator.cs",
-              "DocumentMoniker": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\App.Core\\Validators\\UserDtoValidator.cs",
-              "RelativeDocumentMoniker": "..\\App.Core\\Validators\\UserDtoValidator.cs",
-              "ToolTip": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\App.Core\\Validators\\UserDtoValidator.cs",
-              "RelativeToolTip": "..\\App.Core\\Validators\\UserDtoValidator.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T07:09:53.43Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginUserCommand.cs",
-              "DocumentMoniker": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\App.Core\\Apps\\User\\Command\\LoginUserCommand.cs",
-              "RelativeDocumentMoniker": "..\\App.Core\\Apps\\User\\Command\\LoginUserCommand.cs",
-              "ToolTip": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\App.Core\\Apps\\User\\Command\\LoginUserCommand.cs",
-              "RelativeToolTip": "..\\App.Core\\Apps\\User\\Command\\LoginUserCommand.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAtwDMAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T06:54:54.012Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CreateUserCommand.cs",
-              "DocumentMoniker": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\App.Core\\Apps\\User\\Command\\CreateUserCommand.cs",
-              "RelativeDocumentMoniker": "..\\App.Core\\Apps\\User\\Command\\CreateUserCommand.cs",
-              "ToolTip": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\App.Core\\Apps\\User\\Command\\CreateUserCommand.cs",
-              "RelativeToolTip": "..\\App.Core\\Apps\\User\\Command\\CreateUserCommand.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAIwDUAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T06:51:45.808Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Role.cs",
-              "DocumentMoniker": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\Domain\\Entities\\Role.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Entities\\Role.cs",
-              "ToolTip": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\Domain\\Entities\\Role.cs",
-              "RelativeToolTip": "..\\Domain\\Entities\\Role.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T05:30:04.05Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MovieDto.cs",
-              "DocumentMoniker": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\App.Core\\Models\\MovieDto.cs",
-              "RelativeDocumentMoniker": "..\\App.Core\\Models\\MovieDto.cs",
-              "ToolTip": "C:\\Users\\shreyaraut\\Notes\\FinalAssessment\\Movies\\MoviesBackend\\App.Core\\Models\\MovieDto.cs",
-              "RelativeToolTip": "..\\App.Core\\Models\\MovieDto.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T05:04:38.032Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-22T07:09:24.793Z"
             }
           ]
         }

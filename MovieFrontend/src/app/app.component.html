@@ -1,1 +1,5 @@
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
+<div *ngIf="loaderService.loaderSignal()" class="loader">
+    <div class="spinner"></div> Loading...
+  </div>
+  <router-outlet></router-outlet>

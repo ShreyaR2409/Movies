@@ -90,7 +90,7 @@ namespace App.Core.Apps.Movie.Command
             {
                 profileimage.CopyTo(stream);
             }
-            return $"/MoviePoster/{filename}";
+            return $"/uploads/{filename}";
         }
     }
 }

@@ -64,7 +64,7 @@ namespace MovieApi.Controllers
             }
 
             // Call the query with the search string
-            var allMovie = await _mediator.Send(new SearchMovieRequest { s = s });
+            var allMovie = await _mediator.Send(new SearchMovieRequest { s = s, apikey = apikey });
             return Ok(allMovie);
         }
     }
