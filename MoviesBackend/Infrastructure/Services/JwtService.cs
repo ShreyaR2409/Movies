@@ -27,7 +27,7 @@ namespace Infrastructure.Services
             new Claim("Id", user.UserId.ToString()),
             new Claim(ClaimTypes.Role, role),
             new Claim("Email", user.Email),
-            new Claim("Role", role),
+            //new Claim("Role", role),
             new Claim("Api", ApiKey)
         };
 

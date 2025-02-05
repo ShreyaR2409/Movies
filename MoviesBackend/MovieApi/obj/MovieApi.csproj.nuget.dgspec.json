@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\MovieApi\\MovieApi.csproj": {}
+    "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\MovieApi\\MovieApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj": {
+    "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj",
+        "projectUniqueName": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj",
         "projectName": "App.Core",
-        "projectPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj",
+        "projectPath": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj",
         "packagesPath": "C:\\Users\\shreyaraut\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\obj\\",
+        "outputPath": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\App.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\shreyaraut\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,8 +29,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj"
+              "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj"
               }
             }
           }
@@ -99,14 +99,14 @@
         }
       }
     },
-    "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj": {
+    "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\shreyaraut\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\shreyaraut\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -160,14 +160,14 @@
         }
       }
     },
-    "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\shreyaraut\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\shreyaraut\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -185,8 +185,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj": {
-                "projectPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj"
+              "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj": {
+                "projectPath": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj"
               }
             }
           }
@@ -251,14 +251,14 @@
         }
       }
     },
-    "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\MovieApi\\MovieApi.csproj": {
+    "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\MovieApi\\MovieApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\MovieApi\\MovieApi.csproj",
+        "projectUniqueName": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\MovieApi\\MovieApi.csproj",
         "projectName": "MovieApi",
-        "projectPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\MovieApi\\MovieApi.csproj",
+        "projectPath": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\MovieApi\\MovieApi.csproj",
         "packagesPath": "C:\\Users\\shreyaraut\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\MovieApi\\obj\\",
+        "outputPath": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\MovieApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\shreyaraut\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -276,11 +276,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj": {
-                "projectPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj"
+              "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj": {
+                "projectPath": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj"
               },
-              "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }

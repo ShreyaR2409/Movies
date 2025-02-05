@@ -57,3 +57,15 @@ C:\Users\shreyaraut\Downloads\Movies\Movies\MoviesBackend\Domain\obj\Debug\net8.
 C:\Users\shreyaraut\Downloads\Movies\Movies\MoviesBackend\Domain\obj\Debug\net8.0\refint\Domain.dll
 C:\Users\shreyaraut\Downloads\Movies\Movies\MoviesBackend\Domain\obj\Debug\net8.0\Domain.pdb
 C:\Users\shreyaraut\Downloads\Movies\Movies\MoviesBackend\Domain\obj\Debug\net8.0\ref\Domain.dll
+C:\Users\shreyaraut\Notes\FullStackAssessment\Movies\Movies\MoviesBackend\Domain\bin\Debug\net8.0\Domain.deps.json
+C:\Users\shreyaraut\Notes\FullStackAssessment\Movies\Movies\MoviesBackend\Domain\bin\Debug\net8.0\Domain.dll
+C:\Users\shreyaraut\Notes\FullStackAssessment\Movies\Movies\MoviesBackend\Domain\bin\Debug\net8.0\Domain.pdb
+C:\Users\shreyaraut\Notes\FullStackAssessment\Movies\Movies\MoviesBackend\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shreyaraut\Notes\FullStackAssessment\Movies\Movies\MoviesBackend\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+C:\Users\shreyaraut\Notes\FullStackAssessment\Movies\Movies\MoviesBackend\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+C:\Users\shreyaraut\Notes\FullStackAssessment\Movies\Movies\MoviesBackend\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\shreyaraut\Notes\FullStackAssessment\Movies\Movies\MoviesBackend\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+C:\Users\shreyaraut\Notes\FullStackAssessment\Movies\Movies\MoviesBackend\Domain\obj\Debug\net8.0\Domain.dll
+C:\Users\shreyaraut\Notes\FullStackAssessment\Movies\Movies\MoviesBackend\Domain\obj\Debug\net8.0\refint\Domain.dll
+C:\Users\shreyaraut\Notes\FullStackAssessment\Movies\Movies\MoviesBackend\Domain\obj\Debug\net8.0\Domain.pdb
+C:\Users\shreyaraut\Notes\FullStackAssessment\Movies\Movies\MoviesBackend\Domain\obj\Debug\net8.0\ref\Domain.dll

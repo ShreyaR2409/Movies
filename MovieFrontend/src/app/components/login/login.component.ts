@@ -27,14 +27,15 @@ export class LoginComponent {
           if (data.status == 200) {
             this.toastr.success(data.message, 'Success');
             this.router.navigateByUrl('/dashboard');
-            const helper = new JwtHelperService();
-            const decodedToken = helper.decodeToken(data.token)
-            console.log(decodedToken);
-            sessionStorage.setItem("Token",data.token);
-            sessionStorage.setItem("Id", decodedToken.Id);
-            sessionStorage.setItem("Email", decodedToken.Email);
-            sessionStorage.setItem("Role", decodedToken.Role);
-            sessionStorage.setItem("ApiKey", decodedToken.Api);
+            sessionStorage.setItem("Token", data.token);
+            // const helper = new JwtHelperService();
+            // const decodedToken = helper.decodeToken(data.token)
+            // console.log(decodedToken);
+            // sessionStorage.setItem("Token",data.token);
+            // sessionStorage.setItem("Id", decodedToken.Id);
+            // sessionStorage.setItem("Email", decodedToken.Email);
+            // sessionStorage.setItem("Role", decodedToken.Role);
+            // sessionStorage.setItem("ApiKey", decodedToken.Api);
           }
           else {
             this.toastr.error(data.message, 'error');

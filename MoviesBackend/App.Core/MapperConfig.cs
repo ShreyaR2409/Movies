@@ -15,7 +15,6 @@ namespace App.Core
         {
             CreateMap<MovieDto, Movie>();
             CreateMap<UserDto, User>();
-
         }
     }
 }

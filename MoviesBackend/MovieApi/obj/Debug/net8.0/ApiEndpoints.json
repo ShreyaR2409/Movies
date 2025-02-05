@@ -53,6 +53,42 @@
   },
   {
     "ContainingType": "MovieApi.Controllers.MovieController",
+    "Method": "GetMovieByPage",
+    "RelativePath": "api/Movie/Get-MovieByPage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PageIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FilterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieApi.Controllers.MovieController",
     "Method": "getAllMovies",
     "RelativePath": "api/Movie/getSearchedMovie",
     "HttpMethod": "GET",

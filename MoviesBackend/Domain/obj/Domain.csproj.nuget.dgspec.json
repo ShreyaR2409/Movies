@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj": {}
+    "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj": {
+    "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\shreyaraut\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\shreyaraut\\AppData\\Roaming\\NuGet\\NuGet.Config",

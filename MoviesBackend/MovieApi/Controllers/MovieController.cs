@@ -41,6 +41,23 @@ namespace MovieApi.Controllers
             return Ok(res);
         }
 
+        [HttpGet("Get-MovieByPage")]
+        public async Task<IActionResult> GetMovieByPage(int PageIndex, int PageSize, string? SortColumn, string? SortOrder, string? FilterValue)
+        {
+            _logger.LogInformation("Get Movie Method Called");
+            var res = await _mediator.Send(new GetMoviesByPageRequest 
+            { 
+                PageIndex = PageIndex, 
+                PageSize= PageSize,
+                SortColumn = SortColumn,
+                SortOrder = SortOrder,
+                FilterValue = FilterValue
+
+            });
+            _logger.LogInformation("Response From Get Movie Api", res);
+            return Ok(res);
+        }
+
         [Authorize("Admin")]
         [HttpPut("Update-Movie")]
         public async Task<IActionResult> UpdateMovie( int Id , [FromForm] MovieDto movie)

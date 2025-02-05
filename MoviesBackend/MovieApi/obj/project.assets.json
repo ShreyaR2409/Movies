@@ -5767,11 +5767,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\MovieApi\\MovieApi.csproj",
+      "projectUniqueName": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\MovieApi\\MovieApi.csproj",
       "projectName": "MovieApi",
-      "projectPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\MovieApi\\MovieApi.csproj",
+      "projectPath": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\MovieApi\\MovieApi.csproj",
       "packagesPath": "C:\\Users\\shreyaraut\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\MovieApi\\obj\\",
+      "outputPath": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\MovieApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\shreyaraut\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5789,11 +5789,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj": {
-              "projectPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj"
+            "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj": {
+              "projectPath": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\App.Core\\App.Core.csproj"
             },
-            "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

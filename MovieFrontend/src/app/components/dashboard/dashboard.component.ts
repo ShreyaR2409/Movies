@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MovieService } from '../../services/Movies/movie.service';
 import { CommonModule } from '@angular/common';
+import {NgxPaginationModule} from 'ngx-pagination';
+
 import {
   FormControl,
   FormGroup,
@@ -10,72 +12,44 @@ import {
 } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { debounceTime, Subject, switchMap, distinctUntilChanged } from 'rxjs';
-import{Modal} from 'bootstrap';
+import { Modal } from 'bootstrap';
 import { ActivatedRoute, Router } from '@angular/router';
-import { NgxPaginationModule } from 'ngx-pagination';
+import { JwtService } from '../../services/Jwt/jwt.service';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule,FormsModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule, NgxPaginationModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css',
 })
 export class DashboardComponent implements OnInit {
-  MoviesList: any;
+  MoviesList: any[] = [];
   selectedFile: File | null = null;
   selectedUpdateFile: File | null = null;
   movieToUpdateId: number | null = null;
   movieToDelete: number | null = null;
   searchQuery: string = '';
   filteredMovies: any[] = [];
-  apikey = sessionStorage.getItem("ApiKey")!
+  // apikey = sessionStorage.getItem("ApiKey")!
+  apikey : string = '';
   private searchSubject = new Subject<string>();
-  isAdmin : boolean = true;
+  isAdmin: boolean = true;
   userRole: string | null = null;
   modal!: bootstrap.Modal;
-  page: number = 1;
-  total: number = 0;
-  @ViewChild('closebutton') closebutton : any;
-  @ViewChild('closebuttonupdate') closebuttonupdate : any;
+  totalRecordCount : number = 0;
+  pageIndex : number = 1;
+  pageSize : number = 4;
+  sortOrder : string = '';
+  sortColumn : string = '';
+  filterValue : string = '';
+  @ViewChild('closebutton') closebutton: any;
+  @ViewChild('closebuttonupdate') closebuttonupdate: any;
 
-  constructor(
-    private movieservice: MovieService,
-    private toastr: ToastrService,
-    private router : Router,
-    private route: ActivatedRoute
-  ) {}
-
-  ngOnInit(): void {
-    this.userRole = sessionStorage.getItem("Role");
-    this.getAllMovie();
-    this.isAdminFn();
-    this.searchSubject
-    .pipe(
-      debounceTime(300),  
-      distinctUntilChanged(), 
-      switchMap((query) => {
-        if (!query) {
-          return this.movieservice.GetMovie(); 
-        }
-        this.navigateToUrl(query);
-        return this.movieservice.SearchMovie(query, this.apikey);  
-      })
-    )
-    .subscribe({
-      next: (response) => {
-        this.MoviesList = response.data || [];
-      },
-      error: (err) => {
-        this.getAllMovie();
-      },
-    });
-  }
-  
   AddMovieForm = new FormGroup({
     Title: new FormControl('', [Validators.required]),
-    ReleaseYear: new FormControl('', [Validators.required,  Validators.minLength(4),      
-      Validators.maxLength(4) ]),
+    ReleaseYear: new FormControl('', [Validators.required, Validators.minLength(4),
+    Validators.maxLength(4)]),
     PosterImg: new FormControl('', [Validators.required]),
   });
 
@@ -85,8 +59,71 @@ export class DashboardComponent implements OnInit {
     PosterImg: new FormControl(''),
   });
 
+  constructor(
+    private movieservice: MovieService,
+    private toastr: ToastrService,
+    private router: Router,
+    private route: ActivatedRoute,
+    private jwtservice: JwtService
+  ) { }
+
+  ngOnInit(): void {
+    // this.userRole = sessionStorage.getItem("Role");
+    this.userRole = this.jwtservice.getRole();
+    this.apikey = this.jwtservice.getApiKey();
+    // this.getAllMovie();
+    this.initialLoad();
+    this.isAdminFn();
+    this.searchSubject
+      .pipe(
+        debounceTime(300),
+        distinctUntilChanged(),
+        switchMap((query) => {
+          if (!query) {
+            // return this.movieservice.GetMovie();
+            return this.movieservice.GetMovieByPage(this.pageIndex, this.pageSize, this.sortColumn, this.sortOrder, this.filterValue);
+          }
+          this.navigateToUrl(query);
+          return this.movieservice.SearchMovie(query, this.apikey);
+        })
+      )
+      .subscribe({
+        next: (response) => {
+          this.MoviesList = response.data || [];
+        },
+        error: (err) => {
+          // this.getAllMovie();
+          this.initialLoad();
+        },
+      });
+  }
+
+  onPageChange(page: number) {
+    this.pageIndex = page; // Update the current page index
+    this.initialLoad(); // Fetch new data
+  }
+  
+
+  initialLoad(){
+    this.movieservice.GetMovieByPage(this.pageIndex, this.pageSize, this.sortColumn, this.sortOrder, this.filterValue).subscribe({
+      next : (data)=>{
+        this.MoviesList = data.data;
+        this.totalRecordCount = data.totalCount;
+      },
+      error : (err)=>{
+        console.log(err); 
+        
+      },
+      complete : () =>{
+        console.log("Initial data loaded" );
+        
+      }
+    })
+  }
+
+
   onSearchChange(query: string) {
-    this.searchSubject.next(query); 
+    this.searchSubject.next(query);
   }
 
   navigateToUrl(query: string) {
@@ -95,10 +132,10 @@ export class DashboardComponent implements OnInit {
       queryParams: { s: query, apikey: this.apikey },
       queryParamsHandling: 'merge',
     });
-  } 
+  }
 
   isAdminFn(): boolean {
-    console.log("Role",this.userRole )
+    console.log("Role", this.userRole)
     if (this.userRole === "Admin") {
       this.isAdmin = true;
       return true;
@@ -111,7 +148,7 @@ export class DashboardComponent implements OnInit {
   validateMaxLength(event: Event): void {
     const input = event.target as HTMLInputElement;
     if (input.value.length > 4) {
-      input.value = input.value.slice(0, 4); 
+      input.value = input.value.slice(0, 4);
       this.AddMovieForm.get('ReleaseYear')?.setValue(input.value);
     }
   }
@@ -121,9 +158,9 @@ export class DashboardComponent implements OnInit {
     if (file) {
       this.selectedFile = file;
       this.AddMovieForm.patchValue({ PosterImg: file });
-      this.AddMovieForm.get('PosterImg')?.updateValueAndValidity(); 
+      this.AddMovieForm.get('PosterImg')?.updateValueAndValidity();
     }
-  }  
+  }
 
   onUpdateFileSelected(event: any) {
     const file = event.target.files[0];
@@ -178,15 +215,12 @@ export class DashboardComponent implements OnInit {
     }
   }
 
-  ResetForm(){
-    this.AddMovieForm.reset();
-  }
-
+  
   AddMovie() {
     console.log(this.AddMovieForm.value);
-    console.log(this.AddMovieForm.valid);  
-    console.log(this.AddMovieForm);  
-
+    console.log(this.AddMovieForm.valid);
+    console.log(this.AddMovieForm);
+    
     if (this.AddMovieForm.valid) {
       const formData = new FormData();
       formData.append('Title', this.AddMovieForm.get('Title')?.value || '');
@@ -197,7 +231,7 @@ export class DashboardComponent implements OnInit {
       if (this.selectedFile) {
         formData.append('PosterImg', this.selectedFile);
       }
-
+      
       this.movieservice.AddMovie(formData).subscribe({
         next: (data) => {
           if (data.status == 200) {
@@ -206,14 +240,14 @@ export class DashboardComponent implements OnInit {
             // this.hideModal();
             this.closebutton.nativeElement.click();
             const modalElement = document.getElementById('addMovieModal');
-            console.log("modalElement",modalElement);
+            console.log("modalElement", modalElement);
             
             if (modalElement) {
               const modalInstance = Modal.getInstance(modalElement);
               if (modalInstance) {
-                console.log("Hide method called");                
+                console.log("Hide method called");
                 const value = modalInstance.hide();
-                console.log(value, "value");                
+                console.log(value, "value");
               }
             }
           } else {
@@ -226,7 +260,7 @@ export class DashboardComponent implements OnInit {
       this.AddMovieForm.markAllAsTouched();
     }
   }
-
+  
   DeleteMovie(movieId: number) {
     console.log(movieId)
     if (movieId) {
@@ -245,13 +279,17 @@ export class DashboardComponent implements OnInit {
         },
       });
     }
-  }  
-
+  }
+  
   getAllMovie() {
     this.movieservice.GetMovie().subscribe({
       next: (data) => {
         this.MoviesList = data.data;
       },
     });
+  }
+
+  ResetForm() {
+    this.AddMovieForm.reset();
   }
 }

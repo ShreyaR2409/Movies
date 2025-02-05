@@ -1,30 +1,48 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\MovieApi\\",
+  "WorkspaceRootPath": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\MovieApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2406B876-B8D2-4631-B24B-3570C907E0D4}|..\\App.Core\\App.Core.csproj|c:\\users\\shreyaraut\\downloads\\movies\\movies\\moviesbackend\\app.core\\apps\\movie\\command\\updatemoviecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2406B876-B8D2-4631-B24B-3570C907E0D4}|..\\App.Core\\App.Core.csproj|c:\\users\\shreyaraut\\notes\\fullstackassessment\\movies\\movies\\moviesbackend\\app.core\\apps\\movie\\query\\getmoviesbypagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2406B876-B8D2-4631-B24B-3570C907E0D4}|..\\App.Core\\App.Core.csproj|c:\\users\\shreyaraut\\downloads\\movies\\movies\\moviesbackend\\app.core\\apps\\movie\\command\\addmoviecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3351E63E-6B20-4559-9EB1-25874C42C766}|MovieApi.csproj|c:\\users\\shreyaraut\\downloads\\movies\\movies\\moviesbackend\\movieapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3351E63E-6B20-4559-9EB1-25874C42C766}|MovieApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2406B876-B8D2-4631-B24B-3570C907E0D4}|..\\App.Core\\App.Core.csproj|c:\\users\\shreyaraut\\downloads\\movies\\movies\\moviesbackend\\app.core\\apps\\movie\\query\\searchmovierequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2406B876-B8D2-4631-B24B-3570C907E0D4}|..\\App.Core\\App.Core.csproj|c:\\users\\shreyaraut\\downloads\\movies\\movies\\moviesbackend\\app.core\\apps\\movie\\query\\getmoviesrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3351E63E-6B20-4559-9EB1-25874C42C766}|MovieApi.csproj|c:\\users\\shreyaraut\\downloads\\movies\\movies\\moviesbackend\\movieapi\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3351E63E-6B20-4559-9EB1-25874C42C766}|MovieApi.csproj|c:\\users\\shreyaraut\\notes\\fullstackassessment\\movies\\movies\\moviesbackend\\movieapi\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3351E63E-6B20-4559-9EB1-25874C42C766}|MovieApi.csproj|solutionrelative:controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3351E63E-6B20-4559-9EB1-25874C42C766}|MovieApi.csproj|c:\\users\\shreyaraut\\downloads\\movies\\movies\\moviesbackend\\movieapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2406B876-B8D2-4631-B24B-3570C907E0D4}|..\\App.Core\\App.Core.csproj|c:\\users\\shreyaraut\\notes\\fullstackassessment\\movies\\movies\\moviesbackend\\app.core\\apps\\movie\\query\\getmoviesrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2406B876-B8D2-4631-B24B-3570C907E0D4}|..\\App.Core\\App.Core.csproj|c:\\users\\shreyaraut\\notes\\fullstackassessment\\movies\\movies\\moviesbackend\\app.core\\mapperconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5793E4B1-0534-45C3-8FFE-726B8EEC2BE9}|..\\Infrastructure\\Infrastructure.csproj|c:\\users\\shreyaraut\\notes\\fullstackassessment\\movies\\movies\\moviesbackend\\infrastructure\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2406B876-B8D2-4631-B24B-3570C907E0D4}|..\\App.Core\\App.Core.csproj|c:\\users\\shreyaraut\\notes\\fullstackassessment\\movies\\movies\\moviesbackend\\app.core\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2406B876-B8D2-4631-B24B-3570C907E0D4}|..\\App.Core\\App.Core.csproj|c:\\users\\shreyaraut\\notes\\fullstackassessment\\movies\\movies\\moviesbackend\\app.core\\apps\\user\\command\\loginusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Command\\UpdateMovieCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3351E63E-6B20-4559-9EB1-25874C42C766}|MovieApi.csproj|c:\\users\\shreyaraut\\notes\\fullstackassessment\\movies\\movies\\moviesbackend\\movieapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3351E63E-6B20-4559-9EB1-25874C42C766}|MovieApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3351E63E-6B20-4559-9EB1-25874C42C766}|MovieApi.csproj|c:\\users\\shreyaraut\\notes\\fullstackassessment\\movies\\movies\\moviesbackend\\movieapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3351E63E-6B20-4559-9EB1-25874C42C766}|MovieApi.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Command\\AddMovieCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Query\\SearchMovieRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Query\\GetMoviesRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,98 +52,166 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AddMovieCommand.cs",
-              "DocumentMoniker": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Command\\AddMovieCommand.cs",
-              "RelativeDocumentMoniker": "..\\App.Core\\Apps\\Movie\\Command\\AddMovieCommand.cs",
-              "ToolTip": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Command\\AddMovieCommand.cs",
-              "RelativeToolTip": "..\\App.Core\\Apps\\Movie\\Command\\AddMovieCommand.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAcwEgAAABQAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "GetMoviesByPageRequest.cs",
+              "DocumentMoniker": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Query\\GetMoviesByPageRequest.cs",
+              "RelativeDocumentMoniker": "..\\App.Core\\Apps\\Movie\\Query\\GetMoviesByPageRequest.cs",
+              "ToolTip": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Query\\GetMoviesByPageRequest.cs",
+              "RelativeToolTip": "..\\App.Core\\Apps\\Movie\\Query\\GetMoviesByPageRequest.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAuwDkAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T10:30:57.291Z",
+              "WhenOpened": "2025-02-04T05:11:38.461Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\MovieApi\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\MovieApi\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHAAAAAaAAAAAAAAAA==",
+              "Title": "GetMoviesRequest.cs",
+              "DocumentMoniker": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Query\\GetMoviesRequest.cs",
+              "RelativeDocumentMoniker": "..\\App.Core\\Apps\\Movie\\Query\\GetMoviesRequest.cs",
+              "ToolTip": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Query\\GetMoviesRequest.cs",
+              "RelativeToolTip": "..\\App.Core\\Apps\\Movie\\Query\\GetMoviesRequest.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAA5wCIAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T09:47:21.704Z",
+              "WhenOpened": "2025-02-03T11:54:37.523Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\MovieApi\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\MovieApi\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBYAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T09:30:42.913Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "MovieController.cs",
-              "DocumentMoniker": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\MovieApi\\Controllers\\MovieController.cs",
+              "DocumentMoniker": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\MovieApi\\Controllers\\MovieController.cs",
               "RelativeDocumentMoniker": "Controllers\\MovieController.cs",
-              "ToolTip": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\MovieApi\\Controllers\\MovieController.cs",
+              "ToolTip": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\MovieApi\\Controllers\\MovieController.cs",
               "RelativeToolTip": "Controllers\\MovieController.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAcwE0AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAiwDgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-23T09:25:10.909Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SearchMovieRequest.cs",
-              "DocumentMoniker": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Query\\SearchMovieRequest.cs",
-              "RelativeDocumentMoniker": "..\\App.Core\\Apps\\Movie\\Query\\SearchMovieRequest.cs",
-              "ToolTip": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Query\\SearchMovieRequest.cs",
-              "RelativeToolTip": "..\\App.Core\\Apps\\Movie\\Query\\SearchMovieRequest.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAuwA8AAAAqAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\App.Core\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "..\\App.Core\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\App.Core\\DependencyInjection.cs",
+              "RelativeToolTip": "..\\App.Core\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T09:05:13.852Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-31T06:07:41.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginUserCommand.cs",
+              "DocumentMoniker": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\User\\Command\\LoginUserCommand.cs",
+              "RelativeDocumentMoniker": "..\\App.Core\\Apps\\User\\Command\\LoginUserCommand.cs",
+              "ToolTip": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\User\\Command\\LoginUserCommand.cs",
+              "RelativeToolTip": "..\\App.Core\\Apps\\User\\Command\\LoginUserCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T06:07:17.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\MovieApi\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\MovieApi\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T09:47:21.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\MovieApi\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\MovieApi\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBYAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T09:30:42.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MapperConfig.cs",
+              "DocumentMoniker": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\App.Core\\MapperConfig.cs",
+              "RelativeDocumentMoniker": "..\\App.Core\\MapperConfig.cs",
+              "ToolTip": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\App.Core\\MapperConfig.cs",
+              "RelativeToolTip": "..\\App.Core\\MapperConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T06:07:55.021Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "GetMoviesRequest.cs",
-              "DocumentMoniker": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Query\\GetMoviesRequest.cs",
-              "RelativeDocumentMoniker": "..\\App.Core\\Apps\\Movie\\Query\\GetMoviesRequest.cs",
-              "ToolTip": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Query\\GetMoviesRequest.cs",
-              "RelativeToolTip": "..\\App.Core\\Apps\\Movie\\Query\\GetMoviesRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvy8AAAAaAAAAAAAAAA==",
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\Infrastructure\\Services\\JwtService.cs",
+              "RelativeDocumentMoniker": "..\\Infrastructure\\Services\\JwtService.cs",
+              "ToolTip": "C:\\Users\\shreyaraut\\Notes\\FullStackAssessment\\Movies\\Movies\\MoviesBackend\\Infrastructure\\Services\\JwtService.cs",
+              "RelativeToolTip": "..\\Infrastructure\\Services\\JwtService.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwBMAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T09:02:24.563Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-31T06:10:06.935Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
+              "Title": "SearchMovieRequest.cs",
+              "DocumentMoniker": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Query\\SearchMovieRequest.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Query\\SearchMovieRequest.cs",
+              "ToolTip": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Query\\SearchMovieRequest.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Query\\SearchMovieRequest.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAuwA8AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T09:05:13.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GetMoviesRequest.cs",
+              "DocumentMoniker": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Query\\GetMoviesRequest.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Query\\GetMoviesRequest.cs",
+              "ToolTip": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Query\\GetMoviesRequest.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Query\\GetMoviesRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvy8AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T09:02:24.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "UpdateMovieCommand.cs",
               "DocumentMoniker": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Command\\UpdateMovieCommand.cs",
-              "RelativeDocumentMoniker": "..\\App.Core\\Apps\\Movie\\Command\\UpdateMovieCommand.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Command\\UpdateMovieCommand.cs",
               "ToolTip": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Command\\UpdateMovieCommand.cs",
-              "RelativeToolTip": "..\\App.Core\\Apps\\Movie\\Command\\UpdateMovieCommand.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Command\\UpdateMovieCommand.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAAwAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T08:59:51.644Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-23T08:59:51.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AddMovieCommand.cs",
+              "DocumentMoniker": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Command\\AddMovieCommand.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Command\\AddMovieCommand.cs",
+              "ToolTip": "C:\\Users\\shreyaraut\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Command\\AddMovieCommand.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Downloads\\Movies\\Movies\\MoviesBackend\\App.Core\\Apps\\Movie\\Command\\AddMovieCommand.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAcwEgAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T10:30:57.291Z"
             }
           ]
         }
